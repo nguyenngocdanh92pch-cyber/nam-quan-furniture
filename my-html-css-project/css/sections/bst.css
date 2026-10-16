@@ -1,0 +1,196 @@
+.bst-section {
+  width: 100%;
+  background-color: #ffffff; /* Nền trắng */
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.bst-container {
+  display: flex;
+
+  width: 100%;
+
+  height: 500px;
+
+  gap: 12px;
+}
+
+/* Khung chứa từng ảnh BST */
+.bst-item {
+  position: relative;
+  flex: 1; /* Chia đều 3 cột bằng nhau */
+  height: 100%;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* Ảnh nền bên trong khối */
+.bst-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+/* Lớp phủ đen mờ */
+.bst-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+/* Tiêu đề BST */
+.bst-title {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+  font-family: "Manrope", "Be Vietnam Pro", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+/* Hiệu ứng tương tác khi rê chuột (Hover) */
+.bst-item:hover .bst-img {
+  transform: scale(1.05);
+}
+
+.bst-item:hover .bst-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE CHO ĐIỆN THOẠI */
+@media screen and (max-width: 768px) {
+  .bst-container {
+    flex-direction: column;
+    height: auto;
+    gap: 8px;
+  }
+
+  .bst-item {
+    height: 300px;
+  }
+}
+.bst-policy-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+/* 1. Ảnh Banner Lớn */
+.bst-banner-large {
+  width: 100%;
+  height: 513px;
+  position: relative;
+  border-radius: 8px; /* Bo góc 8px */
+  overflow: hidden;
+
+  /* Thiết lập viền dưới 10px màu #175214 */
+  border-bottom: 10px solid #175214;
+
+  box-sizing: border-box;
+
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+.banner-large-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.banner-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px; /* Độ dày của viền xanh */
+  background-color: #175214; /* Màu xanh lá đậm theo thiết kế */
+}
+
+/* 2. Khối 3 thẻ Chính Sách (Grid Layout) */
+.policy-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.policy-card {
+  background-color: #f0faf0; /* Màu nền xanh lục rất nhạt */
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.policy-card:hover {
+  transform: translateY(-5px); /* Hiệu ứng nẩy nhẹ khi rê chuột */
+}
+
+/* Biểu tượng tròn xanh */
+.policy-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-icon-wrap img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain; /* Đảm bảo icon giữ đúng tỷ lệ, không bị méo */
+}
+
+.policy-text {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #175214; /* Chữ màu xanh đậm */
+  margin: 0;
+}
+
+/* 3. Đảm bảo giao diện tốt trên Mobile */
+@media screen and (max-width: 768px) {
+  .bst-policy-wrapper {
+    margin-top: 40px;
+    gap: 32px;
+    padding: 0 16px;
+  }
+
+  .policy-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 cột dọc trên điện thoại */
+  }
+}

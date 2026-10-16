@@ -1,0 +1,352 @@
+.collection-section {
+  width: 100%;
+  background-color: #ffffff; /* Nền trắng ngoài cùng */
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.collection-container {
+  width: 1440px;
+  max-width: 95%;
+}
+
+/* =========================================
+   HEADER & TABS (Khối tạo hình bìa hồ sơ)
+========================================= */
+.collection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: none;
+}
+
+.collection-tabs {
+  display: flex;
+  margin-left: 36px;
+  /* Thêm gap để tạo khoảng cách xa giữa tab "Hàng mới về" và "Bán chạy" */
+  gap: 40px;
+}
+
+/* Khối Tab chung */
+.col-tab {
+  padding: 16px 56px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  background: transparent;
+  color: #219653;
+  border: none;
+  cursor: pointer;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: all 0.3s;
+}
+
+/* Tab Đang Chọn (Active) */
+.col-tab.active {
+  background-color: #ddefd8;
+  color: #175214;
+  border-bottom: none;
+  box-shadow: -50vw 0 0 0 #ddefd8;
+  border-top-left-radius: 10;
+  border-top-right-radius: 10px;
+}
+
+/* Nút "Xem tất cả" */
+.col-view-all {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  padding-bottom: 12px;
+}
+
+/* =========================================
+   LƯỚI SẢN PHẨM (Khối thân xanh)
+========================================= */
+.collection-body {
+  height: 531px;
+  background-color: #ddefd8;
+  padding: 40px;
+  box-shadow:
+    -50vw 0 0 0 #ddefd8,
+    50vw 0 0 0 #ddefd8;
+  border-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 0px;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Mặc định 4 cột trên Desktop */
+  gap: 24px;
+}
+
+/* =========================================
+   CARD SẢN PHẨM (Đã sửa lỗi vỡ khung)
+========================================= */
+.col-card {
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* 1. Ép khối bọc ảnh thành hình vuông tuyệt đối */
+.col-card-img-wrap {
+  position: relative;
+  width: 100%;
+
+  padding-top: 100%;
+  background: #f8f8f8;
+}
+
+/* 2. Rút ảnh ra khỏi luồng nội dung (absolute) để ảnh không làm phình khối vuông */
+.col-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Tự động co giãn vừa khung mà không méo */
+  padding: 16px;
+}
+
+.col-card-actions {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.action-btn img {
+  width: 38px;
+  height: 39px;
+}
+
+/* 3. Căn chỉnh lại cụm thông tin chữ */
+.col-card-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+
+  justify-content: flex-start;
+}
+
+/* Tái sử dụng class text/color từ Flash Sale */
+.fs-row-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.fs-prod-name {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0;
+}
+
+.fs-prod-price {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #175214;
+}
+
+.fs-prod-price span {
+  font-size: 12px;
+}
+
+.fs-colors {
+  display: flex;
+  gap: 6px;
+}
+
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* =========================================
+   POPUP MODAL XEM TẤT CẢ SẢN PHẨM
+========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Nền đen mờ */
+  z-index: 9999; /* Luôn nổi lên trên cùng */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Ẩn mặc định, sẽ được bật lên bằng JS */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Khi có class active thì hiện lên */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 1200px; /* Khung rộng vừa phải */
+  height: 85vh; /* Chiều cao chiếm 85% màn hình */
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Cắt những thứ lòi ra ngoài góc bo */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0); /* Hiệu ứng trượt nhẹ từ dưới lên */
+}
+
+/* Header của Popup */
+.modal-header {
+  padding: 20px 32px;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.modal-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #175214; /* Xanh lá Nam Quan */
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  color: #666666;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: #e87a00; /* Đổi cam khi di chuột */
+}
+
+/* Body của Popup (Khu vực có thể cuộn) */
+.modal-body {
+  padding: 32px;
+  overflow-y: auto; /* TẠO THANH CUỘN DỌC KHI SẢN PHẨM TRÀN */
+  flex-grow: 1; /* Lấp đầy chiều cao còn lại của modal */
+  background-color: #f9f9f9;
+}
+
+.modal-body .collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal-body .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal-body .collection-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Màn hình Tablet (Dưới 1024px) */
+@media screen and (max-width: 1024px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr); /* Giảm xuống 2 cột */
+  }
+
+  .col-tab {
+    padding: 12px 24px;
+    font-size: 16px; /* Giảm cỡ chữ tab */
+  }
+}
+
+/* Màn hình Mobile lớn (Dưới 768px) */
+@media screen and (max-width: 768px) {
+  .collection-body {
+    padding: 24px; /* Giảm khoảng lề xanh bên trong */
+    height: auto;
+  }
+
+  .collection-header {
+    flex-direction: column; /* Đẩy chữ "Xem tất cả" xuống dòng */
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .col-view-all {
+    padding-bottom: 0;
+    padding-left: 12px;
+  }
+}
+
+/* Màn hình Mobile nhỏ (Dưới 480px) */
+@media screen and (max-width: 480px) {
+  .collection-grid {
+    grid-template-columns: repeat(1, 1fr); /* Chỉ còn 1 cột sản phẩm xếp dọc */
+  }
+
+  .collection-tabs {
+    flex-direction: column; /* Xếp tab dọc nếu màn hình quá hẹp */
+    width: 100%;
+  }
+
+  .col-tab {
+    width: 100%;
+    text-align: left;
+    border-radius: 8px; /* Bo tròn cả 4 góc khi xếp dọc */
+    margin-bottom: 8px;
+  }
+
+  /* Chỉnh lại góc bo của khối thân khi tab xếp dọc trên điện thoại */
+  .collection-body {
+    border-top-left-radius: 8px;
+  }
+}

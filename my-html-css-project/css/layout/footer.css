@@ -1,0 +1,207 @@
+.footer-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* Background gradient cho toàn bộ footer */
+  background: linear-gradient(180deg, #fafafa 0%, #e5ffe9 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1440px;
+  height: 372px; /* Khóa chiều cao 372px */
+  padding: 40px 64px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Đảm bảo 2 khối cao bằng nhau */
+  gap: 24px;
+}
+
+.footer-info-box {
+  width: 954px;
+  height: 100%;
+
+  padding-left: 0px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Đẩy 2 khối ra xa nhau */
+  align-items: flex-start;
+}
+
+/* Phần Thương hiệu (Trái) */
+.footer-brand {
+  width: 299px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-logo {
+  width: 227px !important;
+  height: 46px !important;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+
+.footer-desc {
+  font-family: "Be Vietnam Pro", sans-serif;
+
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 27px;
+  color: #181d27;
+  text-align: justify; /* Căn lề Justified hai bên */
+  margin: 0;
+}
+.footer-sketch {
+  height: 64px;
+  width: max-content;
+  object-fit: contain;
+  margin-top: 16px;
+}
+/* Phần Địa chỉ (Phải) */
+.footer-address-col {
+  width: 515px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.footer-heading {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #181d27;
+  margin: 0;
+}
+
+.footer-address-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Khoảng cách giữa Showroom 1 và Showroom 2 */
+}
+
+.footer-address {
+  margin-bottom: 20px;
+}
+.footer-address p {
+  font-family: "Be Vietnam Pro", sans-serif;
+
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  color: #181d27;
+  text-align: justify;
+
+  margin: 0;
+}
+.footer-address strong {
+  font-weight: 600;
+  color: #181d27;
+}
+
+.footer-social-box {
+  position: relative; /*Làm mỏ neo để giữ chữ không bay ra ngoài */
+  z-index: 1;
+  width: 353px;
+  height: 372px;
+
+  border-radius: 200px 0 0 0; /* Chỉ bo góc trên cùng bên trái 200px, các góc khác để vuông vức sát lề */
+  overflow: hidden;
+
+  background-image: url("../../assets/section13/image2.jpg");
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 0 16px 24px;
+
+  margin-right: -120px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+  width: 217px;
+  z-index: 10;
+}
+
+.social-icon {
+  width: 45.25px;
+  height: 44px;
+  background-color: #fdfdfd;
+  border: 1px solid #a4a7ae;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  transition: transform 0.2s;
+}
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.footer-slogan {
+  position: absolute;
+  top: 130px; /* Độ cao của chữ so với nóc khối hình */
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  z-index: 10; /*Ép dòng chữ nổi bần bật lên lớp trên cùng */
+}
+
+.slogan-line-1 {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: 24px;
+  color: #004368;
+  line-height: 1;
+  margin: 0;
+  margin-left: -30px;
+}
+
+.slogan-line-2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #004368;
+  line-height: 1;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-container {
+    height: auto;
+    flex-direction: column;
+    padding: 32px;
+  }
+  .footer-info-box {
+    width: 100%;
+    flex-direction: column;
+  }
+  .footer-brand,
+  .footer-address-col {
+    width: 100%;
+  }
+  .footer-social-box {
+    width: 100%;
+    height: 250px;
+  }
+}

@@ -1,0 +1,282 @@
+.flash-sale-section {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  padding: 80px 0; /* Khoảng cách trên dưới */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Cắt phần ảnh mờ bị tràn viền */
+  background-color: #ffffff; /* Nền lót dự phòng */
+}
+
+.flash-sale-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-image: url("../../assets/section4/background.png");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(0px); /* Làm mờ ảnh nền */
+  opacity: 0.2;
+  z-index: 1;
+}
+/* Lớp mặt nạ trắng chuyển sắc mượt mà ở CẢ 2 ĐẦU (trên và dưới) */
+.flash-sale-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Bao phủ toàn bộ chiều cao của section thay vì chỉ 250px */
+
+  /* Gradient 4 điểm: Trắng đục (trên) -> Trong suốt (giữa) -> Trắng đục (dưới) */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  z-index: 2;
+  pointer-events: none;
+}
+/* =========================================
+   KHUNG NỘI DUNG Ở GIỮA
+========================================= */
+.fs-container {
+  position: relative;
+  z-index: 3;
+  width: 1280px;
+  max-width: 95%;
+
+  /* Xóa nền trắng và box-shadow bao quanh tổng thể */
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* --- Header & Countdown --- */
+.fs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.fs-title {
+  font-family: var(--font-family-primary, "Manrope", sans-serif);
+  font-size: 32px;
+  font-weight: 800;
+  color: #67de7e;
+  margin-bottom: 35px;
+}
+
+.fs-countdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fs-countdown-text {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #175214;
+  margin-right: 12px;
+}
+
+.fs-time-box {
+  width: 60px;
+  height: 60px;
+
+  /* Căn giữa chữ bên trong hộp */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Màu sắc và Bo góc */
+  background-color: #fff7f0;
+  color: #e87a00; /* Màu chữ cam đậm */
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 4px;
+
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.fs-colon {
+  color: #e87a00;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* --- Tabs Thời gian --- */
+.fs-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.fs-tab {
+  padding: 8px 24px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #175214;
+  border: 1px solid #175214;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.fs-tab.active,
+.fs-tab:hover {
+  background-color: #175214;
+  color: #ffffff;
+}
+
+.fs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột bằng nhau */
+  gap: 24px;
+}
+
+.fs-card {
+  background-color: #ffffff; /* Nền trắng cho từng sản phẩm */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* Đổ bóng để nổi bật trên nền mờ */
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 375px;
+  padding: 16px;
+  gap: 16px; /* Khoảng cách giữa ảnh và nội dung chữ */
+}
+
+/* Khung chứa ảnh */
+.fs-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fs-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Hiển thị trọn vẹn ảnh, không bị cắt xén */
+}
+
+/* Icon tym & giỏ hàng */
+.fs-card-actions {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.action-btn img {
+  width: 38px;
+  height: 39px;
+  opacity: 0.9;
+}
+
+.fs-card-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Lấp đầy phần không gian còn lại để đẩy progress bar xuống đáy */
+  justify-content: space-between;
+}
+
+.fs-row-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.fs-prod-name {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0;
+}
+
+.fs-prod-price {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #e87a00; /* Màu cam */
+}
+
+.fs-prod-price span {
+  font-size: 12px;
+}
+
+/* Chấm màu sắc */
+.fs-colors {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Thanh tiến trình (Đã bán) */
+.fs-progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #fff2e6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fs-progress-fill {
+  height: 100%;
+  background-color: #e87a00;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .fs-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 cột */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .fs-grid {
+    grid-template-columns: repeat(1, 1fr); /* Mobile: 1 cột */
+  }
+}

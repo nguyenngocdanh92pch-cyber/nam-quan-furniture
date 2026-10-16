@@ -1,0 +1,2172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nam Quan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+
+    <!-- Thẻ link 2: Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header chính (màu trắng) -->
+    <div class="header-actions">
+      <!-- Phần 1: Logo bên trái -->
+      <a href="#" class="logo-link">
+        <img src="assets/nav/logo.jpg" alt="Nam Quan" class="logo-img" />
+      </a>
+
+      <!-- Phần 2: Khối các Icon thao tác bên phải (được bọc chung) -->
+      <div class="menu-actions">
+        <a href="#" class="action-item">
+          <img src="assets/nav/profile.png" alt="User" />
+          <span>Thao Uyen</span>
+        </a>
+
+        <a href="#" class="action-item">
+          <img src="assets/nav/shopping.png" alt="Cart" />
+          <span>Giỏ hàng</span>
+        </a>
+
+        <a href="#" class="action-item">
+          <img src="assets/nav/notification.png" alt="Bell" />
+          <span>Thông báo</span>
+        </a>
+
+        <a href="tel:0798072888" class="action-item">
+          <img src="assets/nav/phone.png" alt="Phone" />
+          <span>0798.072.888</span>
+        </a>
+
+        <!-- Nút chuyển ngôn ngữ -->
+        <div class="lang-switch">
+          <span class="lang-active">VN</span>
+          <span class="lang-inactive">EN</span>
+        </div>
+      </div>
+    </div>
+    <section class="hero-section">
+      <!-- 1. Video nền (Autoplay, Loop, Mute là bắt buộc để trình duyệt tự động chạy) -->
+      <video class="hero-video-bg" autoplay loop muted playsinline>
+        <!-- Thay đổi đường dẫn đến file video thực tế của bạn -->
+        <source src="assets/section1/video.mp4" type="video/mp4" />
+        Trình duyệt của bạn không hỗ trợ thẻ video.
+      </video>
+
+      <!-- 2. Lớp phủ màu đen 30% theo thiết kế Figma -->
+      <div class="hero-overlay"></div>
+
+      <!-- 3. Nội dung nằm đè lên video (Sub-header & Text) -->
+      <div class="hero-content-wrapper">
+        <!-- SUB-HEADER (Menu & Tìm kiếm) -->
+        <div class="sub-header">
+          <!-- Menu điều hướng -->
+          <nav class="sub-nav">
+            <ul class="sub-nav-list">
+              <li><a href="#" class="sub-nav-link active">Trang chủ</a></li>
+              <li><a href="#" class="sub-nav-link">Sản phẩm</a></li>
+              <li><a href="#" class="sub-nav-link">Bộ sưu tập</a></li>
+              <li><a href="#" class="sub-nav-link">Dự án</a></li>
+              <li><a href="#" class="sub-nav-link">Tin tức</a></li>
+              <li><a href="#" class="sub-nav-link">Liên hệ</a></li>
+            </ul>
+          </nav>
+
+          <!-- Khung tìm kiếm -->
+          <div class="sub-search-box">
+            <img
+              src="assets/section1/search.png"
+              alt="Search"
+              class="search-icon"
+            />
+            <input type="text" placeholder="Tìm kiếm" class="search-input" />
+          </div>
+        </div>
+
+        <div class="hero-text-block">
+          <h1 class="text-hero">MỖI KHÔNG GIAN<br />MỘT CÂU CHUYỆN RIÊNG</h1>
+          <p class="text-hero-desc">
+            Kiến tạo không gian sống tinh tế với những giải pháp nội thất hiện
+            đại, hài hòa giữa thẩm mỹ, công năng và cảm hứng sống.
+          </p>
+          <a href="#" class="hero-btn">Khám phá ngay &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="gradient-bg-wrapper">
+      <section class="categories-section">
+        <!-- Khối bao bọc danh sách để tạo khoảng cách 8px và dàn hàng ngang -->
+        <div class="category-list">
+          <!-- Copy component từ category-card.html dán vào đây -->
+          <!-- Card 1 -->
+          <a href="#" class="category-card">
+            <img
+              src="assets/section2/sofa.jpg"
+              alt="Sofa"
+              class="category-img"
+            />
+            <div class="category-overlay"></div>
+            <h3 class="category-title">Sofa</h3>
+          </a>
+
+          <!-- Card 2 (Chỉ cần đổi ảnh và chữ) -->
+          <a href="#" class="category-card">
+            <img
+              src="assets/section2/chair.jpg"
+              alt="Ghế"
+              class="category-img"
+            />
+            <div class="category-overlay"></div>
+            <h3 class="category-title">Ghế</h3>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="#" class="category-card">
+            <img
+              src="assets/section2/table&cabinet.jpg"
+              alt="Bàn & Tủ"
+              class="category-img"
+            />
+            <div class="category-overlay"></div>
+            <h3 class="category-title">Bàn & Tủ</h3>
+          </a>
+
+          <a href="#" class="category-card">
+            <img
+              src="assets/section2/bed.jpg"
+              alt="Giường"
+              class="category-img"
+            />
+            <div class="category-overlay"></div>
+            <h3 class="category-title">Giường</h3>
+          </a>
+
+          <a href="#" class="category-card">
+            <img
+              src="assets/section2/outside.jpg"
+              alt="Ngoài trời"
+              class="category-img"
+            />
+            <div class="category-overlay"></div>
+            <h3 class="category-title">Ngoài trời</h3>
+          </a>
+
+          <a href="#" class="category-card">
+            <img
+              src="assets/section2/office.jpg"
+              alt="Văn phòng"
+              class="category-img"
+            />
+            <div class="category-overlay"></div>
+            <h3 class="category-title">Văn phòng</h3>
+          </a>
+
+          <a href="#" class="category-card">
+            <img
+              src="assets/section2/decoration.jpg"
+              alt="Trang trí"
+              class="category-img"
+            />
+            <div class="category-overlay"></div>
+            <h3 class="category-title">Trang trí</h3>
+          </a>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <!-- Cột bên trái: Ảnh phòng khách lớn -->
+        <div class="about-image-main">
+          <img src="assets/section3/room1.jpg" alt="Không gian sống đẳng cấp" />
+        </div>
+
+        <!-- Cột bên phải: Chỉ chứa ảnh nhỏ -->
+        <div class="about-content-wrapper">
+          <div class="about-image-sub">
+            <img src="assets/section3/room2.jpg" alt="Sofa xanh" />
+          </div>
+        </div>
+
+        <!-- Khối nội dung chữ: ĐƯA RA NGOÀI, NẰM NGANG HÀNG VỚI 2 CỘT -->
+        <div class="about-text-card">
+          <h2 class="about-title">KIẾN TẠO KHÔNG GIAN SỐNG ĐẲNG CẤP</h2>
+          <p class="about-desc">
+            Nam Quan là đơn vị cung cấp giải pháp nội thất toàn diện, mang đến
+            những sản phẩm chất lượng cao cùng trải nghiệm không gian sống đẳng
+            cấp. Với sự chỉn chu trong từng chi tiết, chúng tôi đồng hành cùng
+            khách hàng kiến tạo những giá trị bền vững cho tổ ấm và công trình.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <section class="flash-sale-section">
+      <!-- Nội dung chính -->
+      <div class="fs-container">
+        <!-- 1. Header: Tiêu đề & Countdown -->
+        <div class="fs-header">
+          <h2 class="fs-title">FLASH SALE NỘI THẤT</h2>
+          <div class="fs-countdown">
+            <span class="fs-countdown-text">Bắt đầu sau</span>
+            <div class="fs-time-box">00</div>
+            <span class="fs-colon">:</span>
+            <div class="fs-time-box">01</div>
+            <span class="fs-colon">:</span>
+            <div class="fs-time-box">21</div>
+            <span class="fs-colon">:</span>
+            <div class="fs-time-box">56</div>
+          </div>
+        </div>
+
+        <!-- 2. Tabs thời gian -->
+        <div class="fs-tabs">
+          <button class="fs-tab active">12 - 15h 05/06</button>
+          <button class="fs-tab">20 - 22h 05/06</button>
+        </div>
+
+        <!-- 3. Lưới sản phẩm (Grid 4 cột) -->
+        <div class="fs-grid">
+          <!-- COMPONENT: Card Sản Phẩm 1 -->
+          <div class="fs-card">
+            <!-- Ảnh và icon actions -->
+            <div class="fs-card-img-wrap">
+              <img
+                src="assets/section4/bed.png"
+                alt="Giường"
+                class="fs-card-img"
+              />
+              <div class="fs-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <!-- Thông tin sản phẩm -->
+            <div class="fs-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <!-- Tên theo mẫu -->
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <!-- Màu sắc -->
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+              <!-- Thanh tiến trình -->
+              <div class="fs-progress-bar">
+                <div class="fs-progress-fill" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 2 -->
+          <div class="fs-card">
+            <div class="fs-card-img-wrap">
+              <img
+                src="assets/section4/chair.png"
+                alt="Ghế"
+                class="fs-card-img"
+              />
+              <div class="fs-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="fs-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">7.500.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+              <div class="fs-progress-bar">
+                <div class="fs-progress-fill" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 3 (Bàn tròn đen) -->
+          <div class="fs-card">
+            <div class="fs-card-img-wrap">
+              <img
+                src="assets/section4/circle-table.png"
+                alt="Bàn tròn"
+                class="fs-card-img"
+              />
+              <div class="fs-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="fs-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">7.500.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+              <div class="fs-progress-bar">
+                <div class="fs-progress-fill" style="width: 50%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 4 (Ghế bành xanh dương) -->
+          <div class="fs-card">
+            <div class="fs-card-img-wrap">
+              <img
+                src="assets/section4/blue-chair.png"
+                alt="Ghế bành xanh"
+                class="fs-card-img"
+              />
+              <div class="fs-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="fs-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">7.500.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+              <div class="fs-progress-bar">
+                <div class="fs-progress-fill" style="width: 40%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 5 (Bàn gỗ) -->
+          <div class="fs-card">
+            <div class="fs-card-img-wrap">
+              <img
+                src="assets/section4/desk.png"
+                alt="Bàn gỗ"
+                class="fs-card-img"
+              />
+              <div class="fs-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="fs-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+              <div class="fs-progress-bar">
+                <div class="fs-progress-fill" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 6 (Bình hoa) -->
+          <div class="fs-card">
+            <div class="fs-card-img-wrap">
+              <img
+                src="assets/section4/flower-pot.png"
+                alt="Bình hoa"
+                class="fs-card-img"
+              />
+              <div class="fs-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="fs-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">7.500.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+              <div class="fs-progress-bar">
+                <div class="fs-progress-fill" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 7 (Tủ nhỏ) -->
+          <div class="fs-card">
+            <div class="fs-card-img-wrap">
+              <img
+                src="assets/section4/cabinet.png"
+                alt="Tủ"
+                class="fs-card-img"
+              />
+              <div class="fs-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="fs-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">7.500.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+              <div class="fs-progress-bar">
+                <div class="fs-progress-fill" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 8 (Sofa góc) -->
+          <div class="fs-card">
+            <div class="fs-card-img-wrap">
+              <img
+                src="assets/section4/sofa.png"
+                alt="Sofa góc"
+                class="fs-card-img"
+              />
+              <div class="fs-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="fs-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">7.500.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+              <div class="fs-progress-bar">
+                <div class="fs-progress-fill" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection-section">
+      <div class="collection-container">
+        <!-- Thanh Tabs -->
+        <div class="collection-header">
+          <div class="collection-tabs">
+            <button class="col-tab active">Hàng mới về</button>
+            <button class="col-tab">Bán chạy</button>
+          </div>
+          <a href="#" class="col-view-all">Xem tất cả &rarr;</a>
+        </div>
+        <div class="collection-body">
+          <!-- Lưới sản phẩm -->
+          <div class="collection-grid">
+            <!-- COMPONENT: Card Sản Phẩm -->
+            <div class="col-card">
+              <!-- Ảnh sản phẩm -->
+              <div class="col-card-img-wrap">
+                <img
+                  src="assets/section5/sofa.png"
+                  alt="Sofa kem"
+                  class="col-card-img"
+                />
+                <div class="col-card-actions">
+                  <button class="action-btn">
+                    <img src="assets/icons/heart.png" alt="Like" />
+                  </button>
+                  <button class="action-btn">
+                    <img src="assets/icons/cart.png" alt="Cart" />
+                  </button>
+                </div>
+              </div>
+              <!-- Thông tin chữ -->
+              <div class="col-card-info">
+                <div class="fs-row-price">
+                  <h3 class="fs-prod-name">Ghế Sofa</h3>
+                  <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+                </div>
+                <div class="fs-colors">
+                  <span
+                    class="color-dot"
+                    style="background: #f3e5d8; border: 1px solid #e87a00"
+                    data-image="assets/section4/sofa.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #e0e0e0"
+                    data-image="assets/section4/blue-chair.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #a3a3a3"
+                    data-image="assets/section4/chair.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #333333"
+                    data-image="assets/section4/desk.png"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-card">
+              <!-- Ảnh sản phẩm -->
+              <div class="col-card-img-wrap">
+                <img
+                  src="assets/section5/pot.png"
+                  alt="Bình hoa"
+                  class="col-card-img"
+                />
+                <div class="col-card-actions">
+                  <button class="action-btn">
+                    <img src="assets/icons/heart.png" alt="Like" />
+                  </button>
+                  <button class="action-btn">
+                    <img src="assets/icons/cart.png" alt="Cart" />
+                  </button>
+                </div>
+              </div>
+              <!-- Thông tin chữ -->
+              <div class="col-card-info">
+                <div class="fs-row-price">
+                  <h3 class="fs-prod-name">Ghế Sofa</h3>
+                  <!-- Text giữ nguyên theo mockup -->
+                  <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+                </div>
+                <div class="fs-colors">
+                  <span
+                    class="color-dot"
+                    style="background: #f3e5d8; border: 1px solid #e87a00"
+                    data-image="assets/section4/sofa.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #e0e0e0"
+                    data-image="assets/section4/blue-chair.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #a3a3a3"
+                    data-image="assets/section4/chair.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #333333"
+                    data-image="assets/section4/desk.png"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- COMPONENT: Card Sản Phẩm 3 (Ghế bành xanh dương) -->
+            <div class="col-card">
+              <!-- Ảnh sản phẩm -->
+              <div class="col-card-img-wrap">
+                <img
+                  src="assets/section5/sofa-chair.png"
+                  alt="Ghế xanh dương"
+                  class="col-card-img"
+                />
+                <div class="col-card-actions">
+                  <button class="action-btn">
+                    <img src="assets/icons/heart.png" alt="Like" />
+                  </button>
+                  <button class="action-btn">
+                    <img src="assets/icons/cart.png" alt="Cart" />
+                  </button>
+                </div>
+              </div>
+              <!-- Thông tin chữ -->
+              <div class="col-card-info">
+                <div class="fs-row-price">
+                  <h3 class="fs-prod-name">Ghế Sofa</h3>
+                  <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+                </div>
+                <div class="fs-colors">
+                  <span
+                    class="color-dot"
+                    style="background: #f3e5d8; border: 1px solid #e87a00"
+                    data-image="assets/section4/sofa.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #e0e0e0"
+                    data-image="assets/section4/blue-chair.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #a3a3a3"
+                    data-image="assets/section4/chair.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #333333"
+                    data-image="assets/section4/desk.png"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- COMPONENT: Card Sản Phẩm 4 (Ghế mây đan) -->
+            <div class="col-card">
+              <!-- Ảnh sản phẩm -->
+              <div class="col-card-img-wrap">
+                <img
+                  src="assets/section5/chair.png"
+                  alt="Ghế mây"
+                  class="col-card-img"
+                />
+                <div class="col-card-actions">
+                  <button class="action-btn">
+                    <img src="assets/icons/heart.png" alt="Like" />
+                  </button>
+                  <button class="action-btn">
+                    <img src="assets/icons/cart.png" alt="Cart" />
+                  </button>
+                </div>
+              </div>
+              <!-- Thông tin chữ -->
+              <div class="col-card-info">
+                <div class="fs-row-price">
+                  <h3 class="fs-prod-name">Ghế Sofa</h3>
+                  <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+                </div>
+                <div class="fs-colors">
+                  <span
+                    class="color-dot"
+                    style="background: #f3e5d8; border: 1px solid #e87a00"
+                    data-image="assets/section4/sofa.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #e0e0e0"
+                    data-image="assets/section4/blue-chair.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #a3a3a3"
+                    data-image="assets/section4/chair.png"
+                  ></span>
+
+                  <span
+                    class="color-dot"
+                    style="background: #333333"
+                    data-image="assets/section4/desk.png"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showroom-section">
+      <div class="showroom-container">
+        <!-- 1. Tiêu đề -->
+        <div class="showroom-header">
+          <h2 class="showroom-subtitle">MỖI KHÔNG GIAN MỘT CÂU CHUYỆN</h2>
+          <h1 class="showroom-title">PHÒNG TRƯNG BÀY NAM QUAN</h1>
+        </div>
+
+        <!-- 2. Danh mục phòng -->
+        <div class="showroom-categories">
+          <button class="cat-btn active">Tất cả</button>
+          <button class="cat-btn">Phòng khách</button>
+          <button class="cat-btn">Phòng ngủ</button>
+          <button class="cat-btn">Bếp</button>
+          <button class="cat-btn">Văn phòng</button>
+          <button class="cat-btn">Decor</button>
+        </div>
+
+        <!-- 3. Thanh bộ lọc (Filters) -->
+        <div class="showroom-filters">
+          <!-- Nút Bộ lọc chính có màu cam -->
+          <button class="filter-btn filter-main">
+            <!-- Nhớ thêm icon phễu lọc của bạn vào đường dẫn này -->
+            <img
+              src="assets/icons/filter-orange.png"
+              alt="Filter"
+              style="width: 16px; height: 16px"
+            />
+            Bộ lọc
+          </button>
+          <button class="filter-btn">Loại sản phẩm</button>
+          <button class="filter-btn">Giá</button>
+          <button class="filter-btn">Phong cách</button>
+          <button class="filter-btn">Màu sắc</button>
+          <button class="filter-btn">Vật liệu</button>
+          <button class="filter-btn">Kích thước</button>
+          <button class="filter-btn">Thương hiệu</button>
+        </div>
+
+        <!-- 4. Lưới sản phẩm (Tái sử dụng class .col-card) -->
+        <div class="showroom-grid">
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image1.png"
+                alt="Sofa"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+          <!-- COMPONENT: Card Sản Phẩm 2 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image2.png"
+                alt="Sản phẩm 2"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 3 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image3.png"
+                alt="Sản phẩm 3"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 4 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image4.png"
+                alt="Sản phẩm 4"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 5 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image5.png"
+                alt="Sản phẩm 5"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 6 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image6.png"
+                alt="Sản phẩm 6"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 7 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image7.png"
+                alt="Sản phẩm 7"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 8 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image8.png"
+                alt="Sản phẩm 8"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 9 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image9.png"
+                alt="Sản phẩm 9"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 10 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image10.png"
+                alt="Sản phẩm 10"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 11 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image11.png"
+                alt="Sản phẩm 11"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENT: Card Sản Phẩm 12 -->
+          <div class="col-card">
+            <div class="col-card-img-wrap">
+              <img
+                src="assets/section6/image12.png"
+                alt="Sản phẩm 12"
+                class="col-card-img"
+              />
+              <div class="col-card-actions">
+                <button class="action-btn">
+                  <img src="assets/icons/heart.png" alt="Like" />
+                </button>
+                <button class="action-btn">
+                  <img src="assets/icons/cart.png" alt="Cart" />
+                </button>
+              </div>
+            </div>
+            <div class="col-card-info">
+              <div class="fs-row-price">
+                <h3 class="fs-prod-name">Ghế Sofa</h3>
+                <div class="fs-prod-price">11.000.000 <span>VND</span></div>
+              </div>
+              <div class="fs-colors">
+                <span
+                  class="color-dot"
+                  style="background: #f3e5d8; border: 1px solid #e87a00"
+                  data-image="assets/section4/sofa.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #e0e0e0"
+                  data-image="assets/section4/blue-chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #a3a3a3"
+                  data-image="assets/section4/chair.png"
+                ></span>
+
+                <span
+                  class="color-dot"
+                  style="background: #333333"
+                  data-image="assets/section4/desk.png"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="showroom-view-all-btn">Xem tất cả</button>
+      </div>
+    </section>
+    <!-- =====================================
+       BST SECTION (Bộ sưu tập nổi bật)
+  ====================================== -->
+    <section class="bst-section">
+      <div class="bst-container">
+        <!-- Ảnh BST 1 -->
+        <a href="#" class="bst-item">
+          <!-- Hãy thay đổi đường dẫn src thành ảnh thực tế của bạn -->
+          <img
+            src="assets/section7/bst-modern-living.jpg"
+            alt="BST Modern Living"
+            class="bst-img"
+          />
+          <div class="bst-overlay"></div>
+          <h2 class="bst-title">BST MODERN LIVING</h2>
+        </a>
+
+        <!-- Ảnh BST 2 -->
+        <a href="#" class="bst-item">
+          <img
+            src="assets/section7/bst-luxury.jpg"
+            alt="BST Luxury"
+            class="bst-img"
+          />
+          <div class="bst-overlay"></div>
+          <h2 class="bst-title">BST LUXURY</h2>
+        </a>
+
+        <!-- Ảnh BST 3 -->
+        <a href="#" class="bst-item">
+          <img
+            src="assets/section7/bst-minamalist.jpg"
+            alt="BST Minimalist"
+            class="bst-img"
+          />
+          <div class="bst-overlay"></div>
+          <h2 class="bst-title">BST MINIMALIST</h2>
+        </a>
+      </div>
+
+      <div class="bst-policy-wrapper">
+        <!-- 1. Video không gian phòng khách lớn -->
+        <div class="bst-banner-large">
+          <!-- Thay thẻ <img> thành thẻ <video> -->
+          <!-- Thêm thuộc tính autoplay, loop, muted để video tự chạy êm ái như một ảnh GIF động -->
+          <video class="banner-large-video" autoplay loop muted playsinline>
+            <!-- Đường dẫn trỏ tới file video.mp4 trong thư mục section7 của bạn -->
+            <source src="assets/section7/video.mp4" type="video/mp4" />
+            Trình duyệt của bạn không hỗ trợ thẻ video.
+          </video>
+
+          <!-- Thanh viền xanh lá mỏng dưới đáy video -->
+          <div class="banner-bottom-line"></div>
+        </div>
+
+        <!-- 2. Khối 3 thẻ chính sách (Giữ nguyên như cũ) -->
+        <div class="policy-grid">
+          <!-- Card 1 -->
+          <div class="policy-card">
+            <div class="policy-icon-wrap">
+              <img src="assets/icons/tick-circle.png" alt="Cam kết" />
+            </div>
+            <h3 class="policy-text">Cam kết chính hãng</h3>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="policy-card">
+            <div class="policy-icon-wrap">
+              <img src="assets/icons/truck.png" alt="Giao hàng" />
+            </div>
+            <h3 class="policy-text">Giao hàng miễn phí</h3>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="policy-card">
+            <div class="policy-icon-wrap">
+              <img src="assets/icons/refresh.png" alt="Đổi trả" />
+            </div>
+            <h3 class="policy-text">Đổi trả 7 ngày</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-section">
+      <div class="news-container">
+        <!-- Tiêu đề -->
+        <h2 class="news-title">TIN TỨC</h2>
+
+        <!-- Lưới 3 bài viết -->
+        <div class="news-grid">
+          <!-- Bài viết 1 -->
+          <a href="#" class="news-card">
+            <div class="news-img-wrap">
+              <!-- Bạn thay đổi src bằng đường dẫn ảnh thực tế -->
+              <img
+                src="assets/section8/image1.jpg"
+                alt="Tin tức 1"
+                class="news-img"
+              />
+            </div>
+            <div class="news-info">
+              <h3 class="news-card-title">
+                Xu Hướng Nội Thất 2026 – Tinh Tế & Bền Vững
+              </h3>
+              <p class="news-date">10/03/2026</p>
+              <p class="news-desc">
+                Khám phá những phong cách thiết kế nổi bật với vật liệu thân
+                thiện môi trường ...
+              </p>
+
+              <!-- Mũi tên góc phải dưới -->
+              <div class="news-arrow">
+                <!-- Thay src bằng icon mũi tên của bạn -->
+                <img src="assets/icons/arrow-right.png" alt="Đọc tiếp" />
+              </div>
+            </div>
+          </a>
+
+          <!-- Bài viết 2 -->
+          <a href="#" class="news-card">
+            <div class="news-img-wrap">
+              <img
+                src="assets/section8/image2.jpg"
+                alt="Tin tức 2"
+                class="news-img"
+              />
+            </div>
+            <div class="news-info">
+              <h3 class="news-card-title">
+                Bàn Trà – Điểm Nhấn Hoàn Hảo Cho Phòng Khách
+              </h3>
+              <p class="news-date">23/02/2026</p>
+              <p class="news-desc">
+                Thiết kế đa dạng, đường nét tinh tế và chất liệu cao cấp giúp
+                hoàn thiện...
+              </p>
+              <div class="news-arrow">
+                <img src="assets/icons/arrow-right.png" alt="Đọc tiếp" />
+              </div>
+            </div>
+          </a>
+
+          <!-- Bài viết 3 -->
+          <a href="#" class="news-card">
+            <div class="news-img-wrap">
+              <img
+                src="assets/section8/image3.jpg"
+                alt="Tin tức 3"
+                class="news-img"
+              />
+            </div>
+            <div class="news-info">
+              <h3 class="news-card-title">
+                Giải Pháp Nội Thất Văn Phòng Hiện Đại
+              </h3>
+              <p class="news-date">23/02/2026</p>
+              <p class="news-desc">
+                Tối ưu công năng sử dụng với hệ thống bàn ghế và không gian làm
+                việc hiện đại.
+              </p>
+              <div class="news-arrow">
+                <img src="assets/icons/arrow-right.png" alt="Đọc tiếp" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="knowledge-section">
+      <div class="knowledge-container">
+        <!-- Phần Tiêu đề & Tabs -->
+        <div class="knowledge-header">
+          <h2 class="knowledge-title">KIẾN THỨC PHONG THỦY & NỘI THẤT</h2>
+          <div class="knowledge-tabs">
+            <button class="k-tab active" onclick="showTab('all', this)">
+              Tất cả bài viết
+            </button>
+            <button class="k-tab" onclick="showTab('phongthuy', this)">
+              Phong thủy
+            </button>
+            <button class="k-tab" onclick="showTab('biquyet', this)">
+              Bí quyết Nội Thất
+            </button>
+            <button class="k-tab" onclick="showTab('mausac', this)">
+              Màu sắc
+            </button>
+          </div>
+        </div>
+
+        <!-- Lưới 3 bài viết -->
+        <div class="knowledge-grid" id="knowledge-content">
+          <!-- Bài viết 1 -->
+          <div class="k-card">
+            <div class="k-img-wrap">
+              <span class="k-badge">Phòng khách</span>
+              <!-- Bạn thay đổi src bằng đường dẫn ảnh thực tế -->
+              <img
+                src="assets/section9/living-room.png"
+                alt="Phòng khách"
+                class="k-img"
+              />
+            </div>
+            <div class="k-info">
+              <h3 class="k-card-title">
+                5 Cách Bố Trí Phòng Khách Chung Cư Chuẩn Phong Thủy
+              </h3>
+              <p class="k-date">10/03/2026</p>
+              <p class="k-desc">
+                Khám phá sơ đồ bố trí nội thất phòng khách chung cư giúp lưu
+                thông sinh khí...
+              </p>
+
+              <!-- Footer của thẻ: Tác giả & Nút xem chi tiết -->
+              <div class="k-card-footer">
+                <div class="k-author">
+                  <span class="k-avatar bg-orange">KTS</span>
+                  <span class="k-author-name">KTS. Minh Đức</span>
+                </div>
+                <a href="#" class="k-read-more">Xem chi tiết &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bài viết 2 -->
+          <div class="k-card">
+            <div class="k-img-wrap">
+              <span class="k-badge">Phòng ngủ</span>
+              <img
+                src="assets/section9/bedroom.png"
+                alt="Phòng ngủ"
+                class="k-img"
+              />
+            </div>
+            <div class="k-info">
+              <h3 class="k-card-title">
+                Màu Sơn Phòng Ngủ Cho Người Mệnh Mộc Giúp Gia Đình
+              </h3>
+              <p class="k-date">10/03/2026</p>
+              <p class="k-desc">
+                Người mệnh Mộc nên chọn sơn phòng ngủ màu gì hợp nhất?
+              </p>
+
+              <div class="k-card-footer">
+                <div class="k-author">
+                  <span class="k-avatar bg-blue">HN</span>
+                  <span class="k-author-name">Hoàng Ngọc</span>
+                </div>
+                <a href="#" class="k-read-more">Xem chi tiết &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bài viết 3 -->
+          <div class="k-card">
+            <div class="k-img-wrap">
+              <span class="k-badge">Nhà bếp</span>
+              <img
+                src="assets/section9/kitchen.png"
+                alt="Nhà bếp"
+                class="k-img"
+              />
+            </div>
+            <div class="k-info">
+              <h3 class="k-card-title">
+                Nguyên Tắc Bố Trí Bếp Và Chậu Rửa Tránh Đại Kỵ Thủy Hỏa
+              </h3>
+              <p class="k-date">10/03/2026</p>
+              <p class="k-desc">
+                Bếp ga đại diện cho Hỏa, chậu rửa đại diện cho Thủy
+              </p>
+
+              <div class="k-card-footer">
+                <div class="k-author">
+                  <span class="k-avatar bg-orange">KTS</span>
+                  <span class="k-author-name">KTS. Minh Đức</span>
+                </div>
+                <a href="#" class="k-read-more">Xem chi tiết &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partner-section">
+      <div class="partner-container">
+        <!-- Tiêu đề -->
+        <h2 class="partner-title">ĐỐI TÁC CỦA TÔI</h2>
+
+        <!-- Khối bọc ngoài để giấu những logo bị tràn ra khỏi màn hình -->
+        <div class="partner-list-wrapper">
+          <!-- Thanh ray cuộn chứa các logo -->
+          <div class="partner-track">
+            <!-- SET 1: 7 Logo gốc ban đầu -->
+            <div class="partner-item">
+              <img src="assets/section10/logo1.png" alt="Đối tác 1" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo2.png" alt="Đối tác 2" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo3.png" alt="Đối tác 3" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo4.png" alt="Đối tác 4" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo5.png" alt="Đối tác 5" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo6.png" alt="Đối tác 6" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo7.png" alt="Đối tác 7" />
+            </div>
+
+            <!-- SET 2: 7 Logo COPY Y HỆT ĐỂ TẠO VÒNG LẶP NỐI TIẾP -->
+            <div class="partner-item">
+              <img src="assets/section10/logo1.png" alt="Đối tác 1" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo2.png" alt="Đối tác 2" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo3.png" alt="Đối tác 3" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo4.png" alt="Đối tác 4" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo5.png" alt="Đối tác 5" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo6.png" alt="Đối tác 6" />
+            </div>
+            <div class="partner-item">
+              <img src="assets/section10/logo7.png" alt="Đối tác 7" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="consult-section">
+      <div class="consult-container">
+        <!-- Khối chứa Form nhập liệu -->
+        <div class="consult-form-box">
+          <h2 class="consult-title">
+            KIẾN TẠO KHÔNG GIAN SỐNG THEO PHONG CÁCH CỦA BẠN
+          </h2>
+          <p class="consult-desc">
+            Để lại thông tin, đội ngũ Nam Quan sẽ liên hệ tư vấn miễn phí<br />
+            và giúp bạn lựa chọn giải pháp nội thất phù hợp nhất.
+          </p>
+
+          <form class="consult-form" action="#" method="POST">
+            <input
+              type="text"
+              class="consult-input"
+              placeholder="Họ và tên"
+              required
+            />
+            <input
+              type="tel"
+              class="consult-input"
+              placeholder="Số điện thoại"
+              required
+            />
+            <button type="submit" class="consult-btn">Gửi yêu cầu</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-section">
+      <div class="ai-container">
+        <!-- BẢNG NHẬP LIỆU BÊN TRÁI -->
+        <div class="ai-input-card">
+          <!-- Nhóm Header (Badge + Title) -->
+          <div class="ai-card-header">
+            <div class="ai-badge">
+              <img src="assets/icons/sparkles.png" alt="AI Icon" />
+              <span>AI PHONG THỦY NAM QUAN</span>
+            </div>
+            <h2 class="ai-title">TRỢ LÝ AI PHONG THỦY</h2>
+          </div>
+
+          <!-- Chọn Năm sinh -->
+          <div class="ai-form-group">
+            <label>Năm sinh</label>
+            <div class="ai-select-wrap">
+              <img
+                src="assets/icons/calendar.png"
+                alt="Calendar"
+                class="ai-input-icon"
+              />
+              <select class="ai-select">
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Chọn Giới tính -->
+          <div class="ai-form-group">
+            <label>Giới tính</label>
+            <div class="ai-radio-group">
+              <label class="ai-radio-label">
+                <input type="radio" name="gender" value="nam" checked />
+                <span class="ai-radio-custom"></span> Nam
+              </label>
+              <label class="ai-radio-label">
+                <input type="radio" name="gender" value="nu" />
+                <span class="ai-radio-custom"></span> Nữ
+              </label>
+            </div>
+          </div>
+
+          <!-- Chọn Hướng nhà -->
+          <div class="ai-form-group">
+            <label>Hướng nhà chính</label>
+            <div class="ai-direction-grid">
+              <label class="ai-dir-btn"
+                ><input type="radio" name="direction" value="dong" /><span
+                  >Đông</span
+                ></label
+              >
+              <label class="ai-dir-btn"
+                ><input type="radio" name="direction" value="tay" /><span
+                  >Tây</span
+                ></label
+              >
+              <label class="ai-dir-btn"
+                ><input type="radio" name="direction" value="nam" /><span
+                  >Nam</span
+                ></label
+              >
+              <label class="ai-dir-btn"
+                ><input type="radio" name="direction" value="bac" /><span
+                  >Bắc</span
+                ></label
+              >
+              <label class="ai-dir-btn"
+                ><input
+                  type="radio"
+                  name="direction"
+                  value="dongnam"
+                  checked
+                /><span>Đông Nam</span></label
+              >
+              <label class="ai-dir-btn"
+                ><input type="radio" name="direction" value="dongbac" /><span
+                  >Đông Bắc</span
+                ></label
+              >
+              <label class="ai-dir-btn"
+                ><input type="radio" name="direction" value="taynam" /><span
+                  >Tây Nam</span
+                ></label
+              >
+              <label class="ai-dir-btn"
+                ><input type="radio" name="direction" value="taybac" /><span
+                  >Tây Bắc</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <!-- Nút phân tích -->
+          <button class="ai-submit-btn" onclick="showAIResult()">
+            <img src="assets/icons/sparkles-white.png" alt="Phân tích" />
+            PHÂN TÍCH NGAY
+          </button>
+        </div>
+
+        <!-- BẢNG KẾT QUẢ BÊN PHẢI (Mặc định sẽ ẩn đi bằng CSS) -->
+        <div class="ai-result-card" id="aiResultBox">
+          <h2 class="ai-result-title">KẾT QUẢ THAM KHẢO</h2>
+
+          <!-- Mệnh -->
+          <div class="ai-result-group">
+            <label>Mệnh của bạn</label>
+            <div class="ai-result-box text-green">Mộc</div>
+          </div>
+
+          <!-- Giới tính kết quả -->
+          <div class="ai-result-group">
+            <label>Giới tính</label>
+            <div class="ai-radio-group disabled">
+              <label class="ai-radio-label"
+                ><input type="radio" checked disabled /><span
+                  class="ai-radio-custom"
+                ></span>
+                Nam</label
+              >
+              <label class="ai-radio-label"
+                ><input type="radio" disabled /><span
+                  class="ai-radio-custom"
+                ></span>
+                Nữ</label
+              >
+            </div>
+          </div>
+
+          <!-- Hướng tốt -->
+          <div class="ai-result-group">
+            <label>Hướng tốt</label>
+            <div class="ai-good-dir-list">
+              <div class="ai-good-dir">Đông</div>
+              <div class="ai-good-dir">Đông Nam</div>
+              <div class="ai-good-dir">Nam</div>
+              <div class="ai-good-dir">Bắc</div>
+            </div>
+          </div>
+
+          <!-- Màu sắc -->
+          <div class="ai-result-group">
+            <label>Màu sắc hợp mệnh</label>
+            <div class="ai-color-list">
+              <div class="ai-color-dot" style="background-color: #00ff00"></div>
+              <div class="ai-color-dot" style="background-color: #556b2f"></div>
+              <div class="ai-color-dot" style="background-color: #0077cc"></div>
+              <div class="ai-color-dot" style="background-color: #333333"></div>
+              <div class="ai-color-dot" style="background-color: #8b4513"></div>
+            </div>
+          </div>
+
+          <!-- Gợi ý -->
+          <div class="ai-result-group">
+            <label>Gợi ý bố trí</label>
+            <p class="ai-suggestion-text">
+              Ưu tiên ánh sáng tự nhiên, không gian mở, cây xanh và sử dụng vật
+              liệu mộc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- KHỐI 1: KHUNG VIỀN XANH BÊN TRÁI (Chứa Logo & Địa chỉ) -->
+        <div class="footer-info-box">
+          <!-- Phần Logo và Giới thiệu -->
+          <div class="footer-brand">
+            <img
+              src="./assets/section13/logo-nam-quan.png"
+              alt="Nam Quan Logo"
+              class="footer-logo"
+            />
+            <p class="footer-desc">
+              Thương hiệu nội thất phong cách hiện đại tối giản. Đồng hành kiến
+              tạo không gian tiện ích tối ưu và phong thái thẩm mỹ sang trọng
+              bậc nhất cho ngôi nhà Việt.
+            </p>
+            <img
+              src="assets/section13/image1.png"
+              alt="Phác thảo nội thất"
+              class="footer-sketch"
+            />
+          </div>
+
+          <!-- Phần Địa chỉ Showroom -->
+          <div class="footer-address-col">
+            <h3 class="footer-heading">Văn Phòng & Showroom</h3>
+            <div class="footer-address">
+              <p>
+                <strong>Showroom 1:</strong> Số 90 Hương Lộ 2, Xã Tân Phú Trung,
+                Huyện Củ Chi, TP. HCM
+              </p>
+            </div>
+            <div class="footer-address">
+              <p>
+                <strong>Showroom 2:</strong> Số 712 Đường 23/10, Xã Vĩnh Thạnh,
+                Nha Trang, Khánh Hòa
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- KHỐI 2: HÌNH ẢNH & MẠNG XÃ HỘI BÊN PHẢI -->
+        <div class="footer-social-box">
+          <div class="footer-slogan">
+            <p class="slogan-line-1">Mỗi không gian</p>
+            <p class="slogan-line-2">Một câu chuyện</p>
+          </div>
+          <div class="footer-socials">
+            <a href="#" class="social-icon"
+              ><img src="assets/section13/logo-google.png" alt="Google"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="assets/section13/logo-facebook.png" alt="Facebook"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="assets/section13/logo-zalo.png" alt="Zalo"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="assets/section13/logo-tiktok.png" alt="Tiktok"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/ai-section.js"></script>
+    <script src="js/flash-sale.js"></script>
+    <script src="js/knowledge.js"></script>
+    <script src="js/collection.js"></script>
+    <script src="js/showroom.js"></script>
+    <script src="js/hero.js"></script>
+    <!-- =====================================
+       POPUP MODAL (XEM TẤT CẢ SẢN PHẨM)
+    ====================================== -->
+    <div id="allProductsModal" class="modal-overlay">
+      <div class="modal-content">
+        <!-- Header của Popup -->
+        <div class="modal-header">
+          <h2 class="modal-title">TẤT CẢ SẢN PHẨM</h2>
+          <button class="modal-close-btn">&times;</button>
+        </div>
+
+        <!-- Body của Popup (Nơi chứa lưới sản phẩm có thanh cuộn) -->
+        <div class="modal-body">
+          <div class="collection-grid" id="modalProductGrid">
+            <!-- JavaScript sẽ tự động copy các thẻ .col-card ở ngoài giao diện và "nhét" vào đây -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

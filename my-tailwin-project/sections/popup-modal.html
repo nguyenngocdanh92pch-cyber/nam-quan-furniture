@@ -1,0 +1,32 @@
+<div
+  id="allProductsModal"
+  class="fixed top-0 left-0 w-screen h-screen bg-black/60 z-[9999] flex justify-center items-center opacity-0 invisible transition-all duration-300"
+>
+  <div
+    class="modal-content bg-white w-[90%] max-w-[1200px] h-[85vh] rounded-xl flex flex-col overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.2)] transform translate-y-5 transition-transform duration-300"
+  >
+    <!-- Header -->
+    <div
+      class="px-8 py-5 border-b border-[#eeeeee] flex justify-between items-center bg-[#FAFAFA]"
+    >
+      <h2 class="font-manrope text-2xl font-extrabold text-[#175214] m-0">
+        TẤT CẢ SẢN PHẨM
+      </h2>
+      <button
+        class="modal-close-btn bg-transparent border-none text-[32px] leading-none text-[#666666] cursor-pointer transition-colors hover:text-[#e87a00]"
+      >
+        &times;
+      </button>
+    </div>
+
+    <!-- Body (Nơi hiển thị sản phẩm cuộn) -->
+    <div class="p-8 overflow-y-auto flex-grow bg-[#f9f9f9]">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        id="modalProductGrid"
+      >
+        <!-- JS sẽ tự động copy HTML của các Card nhét vào đây -->
+      </div>
+    </div>
+  </div>
+</div>

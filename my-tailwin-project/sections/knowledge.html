@@ -1,0 +1,211 @@
+<section class="w-full bg-white flex justify-center pt-20 pb-12">
+  <div class="w-full max-w-[1440px] px-6 flex flex-col items-center gap-12">
+    <!-- Tiêu đề & Tabs -->
+    <div class="flex flex-col items-center gap-8 w-full">
+      <h2
+        class="font-manrope text-[32px] font-extrabold leading-[48px] text-[#219653] uppercase text-center m-0"
+      >
+        KIẾN THỨC PHONG THỦY & NỘI THẤT
+      </h2>
+      <div
+        class="flex flex-row flex-wrap md:flex-nowrap gap-4 w-full max-w-[841px] h-auto md:h-[46px] justify-center mx-auto"
+      >
+        <!-- Tab đang kích hoạt (Thêm các class màu cam trực tiếp cho lần load đầu tiên) -->
+        <button
+          class="k-tab active flex-1 min-w-[calc(50%-16px)] md:min-w-0 h-[46px] bg-[#fff2e6] border border-[#e87a00] rounded-lg font-bevietnam text-sm font-semibold text-[#e87a00] flex items-center justify-center cursor-pointer transition-all"
+          onclick="showTab('all', this)"
+        >
+          Tất cả bài viết
+        </button>
+        <button
+          class="k-tab flex-1 min-w-[calc(50%-16px)] md:min-w-0 h-[46px] bg-white border border-[#d5d7da] rounded-lg font-bevietnam text-sm font-normal text-[#333333] flex items-center justify-center cursor-pointer transition-all hover:border-[#e87a00] hover:text-[#e87a00]"
+          onclick="showTab('phongthuy', this)"
+        >
+          Phong thủy
+        </button>
+        <button
+          class="k-tab flex-1 min-w-[calc(50%-16px)] md:min-w-0 h-[46px] bg-white border border-[#d5d7da] rounded-lg font-bevietnam text-sm font-normal text-[#333333] flex items-center justify-center cursor-pointer transition-all hover:border-[#e87a00] hover:text-[#e87a00]"
+          onclick="showTab('biquyet', this)"
+        >
+          Bí quyết Nội Thất
+        </button>
+        <button
+          class="k-tab flex-1 min-w-[calc(50%-16px)] md:min-w-0 h-[46px] bg-white border border-[#d5d7da] rounded-lg font-bevietnam text-sm font-normal text-[#333333] flex items-center justify-center cursor-pointer transition-all hover:border-[#e87a00] hover:text-[#e87a00]"
+          onclick="showTab('mausac', this)"
+        >
+          Màu sắc
+        </button>
+      </div>
+    </div>
+
+    <!-- Lưới 3 bài viết -->
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1277px]"
+      id="knowledge-content"
+    >
+      <!-- Card 1: Phòng khách -->
+      <div
+        class="flex flex-col bg-white border border-[#b0ebad] rounded shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0px_8px_16px_0px_rgba(0,0,0,0.08)] group"
+      >
+        <div class="w-full h-[200px] relative overflow-hidden shrink-0">
+          <span
+            class="absolute top-4 left-4 bg-[#219653] text-white font-bevietnam text-xs font-semibold px-3 py-1.5 rounded z-10"
+            >Phòng khách</span
+          >
+          <img
+            src="assets/section9/living-room.png"
+            alt="Phòng khách"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-6 flex flex-col grow">
+          <h3
+            class="font-bevietnam text-[17px] font-semibold text-[#219653] mb-2 leading-[27px] line-clamp-2"
+          >
+            5 Cách Bố Trí Phòng Khách Chung Cư Chuẩn Phong Thủy
+          </h3>
+          <p
+            class="font-bevietnam text-sm font-normal leading-[21px] text-[#666666] mb-3"
+          >
+            10/03/2026
+          </p>
+          <p
+            class="font-bevietnam text-base font-normal leading-[27px] text-[#333333] mb-6 line-clamp-2"
+          >
+            Khám phá sơ đồ bố trí nội thất phòng khách chung cư giúp lưu thông
+            sinh khí...
+          </p>
+
+          <!-- Tác giả & Xem chi tiết -->
+          <div
+            class="mt-auto pt-4 border-t border-[#e0e0e0] flex justify-between items-center"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bevietnam text-sm font-semibold bg-[#f2994a]"
+                >KTS</span
+              >
+              <span
+                class="font-bevietnam text-[15px] text-[#333333] font-normal"
+                >KTS. Minh Đức</span
+              >
+            </div>
+            <a
+              href="#"
+              class="font-bevietnam text-[15px] font-semibold text-[#181d27] no-underline flex items-center transition-colors hover:text-[#219653]"
+              >Xem chi tiết &rarr;</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Phòng ngủ -->
+      <div
+        class="flex flex-col bg-white border border-[#b0ebad] rounded shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0px_8px_16px_0px_rgba(0,0,0,0.08)] group"
+      >
+        <div class="w-full h-[200px] relative overflow-hidden shrink-0">
+          <span
+            class="absolute top-4 left-4 bg-[#219653] text-white font-bevietnam text-xs font-semibold px-3 py-1.5 rounded z-10"
+            >Phòng ngủ</span
+          >
+          <img
+            src="assets/section9/bedroom.png"
+            alt="Phòng ngủ"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-6 flex flex-col grow">
+          <h3
+            class="font-bevietnam text-[17px] font-semibold text-[#219653] mb-2 leading-[27px] line-clamp-2"
+          >
+            Màu Sơn Phòng Ngủ Cho Người Mệnh Mộc Giúp Gia Đình
+          </h3>
+          <p
+            class="font-bevietnam text-sm font-normal leading-[21px] text-[#666666] mb-3"
+          >
+            10/03/2026
+          </p>
+          <p
+            class="font-bevietnam text-base font-normal leading-[27px] text-[#333333] mb-6 line-clamp-2"
+          >
+            Người mệnh Mộc nên chọn sơn phòng ngủ màu gì hợp nhất?
+          </p>
+
+          <div
+            class="mt-auto pt-4 border-t border-[#e0e0e0] flex justify-between items-center"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bevietnam text-sm font-semibold bg-[#56ccf2]"
+                >HN</span
+              >
+              <span
+                class="font-bevietnam text-[15px] text-[#333333] font-normal"
+                >Hoàng Ngọc</span
+              >
+            </div>
+            <a
+              href="#"
+              class="font-bevietnam text-[15px] font-semibold text-[#181d27] no-underline flex items-center transition-colors hover:text-[#219653]"
+              >Xem chi tiết &rarr;</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Nhà bếp -->
+      <div
+        class="flex flex-col bg-white border border-[#b0ebad] rounded shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0px_8px_16px_0px_rgba(0,0,0,0.08)] group"
+      >
+        <div class="w-full h-[200px] relative overflow-hidden shrink-0">
+          <span
+            class="absolute top-4 left-4 bg-[#219653] text-white font-bevietnam text-xs font-semibold px-3 py-1.5 rounded z-10"
+            >Nhà bếp</span
+          >
+          <img
+            src="assets/section9/kitchen.png"
+            alt="Nhà bếp"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-6 flex flex-col grow">
+          <h3
+            class="font-bevietnam text-[17px] font-semibold text-[#219653] mb-2 leading-[27px] line-clamp-2"
+          >
+            Nguyên Tắc Bố Trí Bếp Và Chậu Rửa Tránh Đại Kỵ Thủy Hỏa
+          </h3>
+          <p
+            class="font-bevietnam text-sm font-normal leading-[21px] text-[#666666] mb-3"
+          >
+            10/03/2026
+          </p>
+          <p
+            class="font-bevietnam text-base font-normal leading-[27px] text-[#333333] mb-6 line-clamp-2"
+          >
+            Bếp ga đại diện cho Hỏa, chậu rửa đại diện cho Thủy
+          </p>
+
+          <div
+            class="mt-auto pt-4 border-t border-[#e0e0e0] flex justify-between items-center"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bevietnam text-sm font-semibold bg-[#f2994a]"
+                >KTS</span
+              >
+              <span
+                class="font-bevietnam text-[15px] text-[#333333] font-normal"
+                >KTS. Minh Đức</span
+              >
+            </div>
+            <a
+              href="#"
+              class="font-bevietnam text-[15px] font-semibold text-[#181d27] no-underline flex items-center transition-colors hover:text-[#219653]"
+              >Xem chi tiết &rarr;</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

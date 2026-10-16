@@ -1,0 +1,302 @@
+.showroom-section {
+  width: 100%;
+  position: relative;
+  padding: 80px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #d7f5d8;
+
+  /* Ảnh nền */
+  background-image: url("../../assets/section6/bg-showroom.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.showroom-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(215, 245, 216, 0.85); /* Xanh lá nhạt trong suốt */
+  backdrop-filter: blur(5px); /* Làm nhòe ảnh nền phía sau */
+  z-index: 1;
+}
+/* Mặt nạ chuyển sắc ở 2 đầu */
+.showroom-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* =========================================
+   KHUNG CHỨA NỘI DUNG (Khung kính 1278px)
+========================================= */
+.showroom-container {
+  position: relative;
+  z-index: 3;
+
+  width: 1278px;
+  max-width: 95%; /* Tránh tràn viền trên màn hình nhỏ */
+
+  padding: 48px 24px;
+
+  /* Thiết lập nền trắng mờ 23% (Tương đương rgba(255, 255, 255, 0.23)) */
+  background-color: rgba(255, 255, 255, 0.23);
+
+  /* Viền trắng mỏng mờ 29% (Tương đương rgba(255, 255, 255, 0.29)) */
+  border: 1px solid rgba(255, 255, 255, 0.29);
+
+  /* Dùng flex column và Gap 48px thay cho margin-bottom ở từng phần tử con */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa các khối con */
+  gap: 48px; /* Khoảng cách chuẩn xác giữa 4 phần tử lớn */
+}
+
+/* --- 1. Tiêu đề --- */
+.showroom-header {
+  text-align: center;
+}
+
+.showroom-subtitle,
+.showroom-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 48px;
+  text-transform: uppercase;
+  margin: 0;
+  background: linear-gradient(to right, #298200, #00bf40);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* --- 2. Danh mục phòng (Thanh Nav) --- */
+.showroom-categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Thiết lập thanh Nav 1230px giống bước trước */
+  width: 100%;
+  max-width: 1230px;
+  height: 94px;
+  padding: 0 32px;
+  background-color: #ebfaea;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.cat-btn {
+  background: transparent;
+  border: none;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #666666;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.cat-btn:hover {
+  color: #175214;
+}
+
+.cat-btn.active {
+  color: #175214;
+}
+
+.cat-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #175214;
+}
+
+/* --- 3. Thanh Bộ lọc --- */
+.showroom-filters {
+  display: flex;
+  gap: 16px; /* Khoảng cách giữa các nút lọc */
+  width: 100%;
+  justify-content: space-between;
+  /* Chống tràn dòng để các nút ép vào 1 hàng ngang duy nhất */
+  flex-wrap: nowrap;
+}
+
+.filter-btn {
+  flex: 1;
+
+  /* Kích thước và cấu trúc viền */
+  height: 46px;
+  background-color: #fdfdfd;
+  border: 1px solid #d5d7da;
+  border-radius: 8px;
+  padding: 0 24px;
+
+  /* Font chữ */
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #181d27;
+
+  /* Căn giữa chữ/icon bên trong nút */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  border-color: #219653;
+  color: #219653;
+  background-color: #f0faf0; /* Thêm chút nền xanh nhạt khi hover cho đẹp */
+}
+
+/* Định dạng riêng cho nút "Bộ lọc" chính (có icon phễu) */
+.filter-main {
+  color: #e87a00;
+  border-color: #e87a00;
+  font-weight: 600; /* Nút chính in đậm hơn một chút */
+}
+
+.filter-main:hover {
+  background-color: #fff2e6;
+  border-color: #e87a00;
+  color: #e87a00;
+}
+
+/* --- 4. Lưới sản phẩm --- */
+.showroom-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.showroom-view-all-btn {
+  width: 200px;
+  height: 46px;
+
+  /* Màu nền Gradient Green */
+  background: linear-gradient(to right, #298200, #00bf40);
+
+  /* Bo góc và viền */
+  border: none;
+  border-radius: 8px;
+
+  /* Font chữ (Kế thừa font chung, chữ màu trắng) */
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+
+  /* Căn giữa chữ bên trong nút */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Hiệu ứng tương tác */
+  cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
+
+  /* KHÔNG CẦN margin-top vì .showroom-container đã có gap: 48px lo việc tạo khoảng cách */
+}
+
+/* Hiệu ứng khi rê chuột vào nút */
+.showroom-view-all-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px); /* Nổi nhẹ lên */
+  box-shadow: 0 4px 12px rgba(41, 130, 0, 0.3); /* Tỏa sáng nhẹ màu xanh */
+}
+
+/* =========================================
+   SHOWROOM CATEGORIES (Danh mục phòng)
+========================================= */
+.showroom-categories {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #e0e0e0; /* Đường kẻ ngang mờ bên dưới */
+  margin-bottom: 24px;
+}
+
+.cat-btn {
+  background: none;
+  border: none;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666666; /* Chữ xám nhạt khi chưa chọn */
+  padding-bottom: 12px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent; /* Chuẩn bị sẵn viền dưới nhưng tàng hình */
+  transition: all 0.3s ease;
+}
+
+/* Nút được chọn sẽ có màu xanh lá và gạch chân */
+.cat-btn.active,
+.cat-btn:hover {
+  color: #175214;
+  border-bottom: 2px solid #175214;
+}
+
+.showroom-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.filter-btn {
+  background-color: #ffffff;
+  border: 1px solid #d5d7da;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Hiệu ứng khi bấm chọn các bộ lọc phụ */
+.filter-btn.active-filter,
+.filter-btn:hover {
+  border-color: #175214;
+  color: #175214;
+}
+
+/* Nút Bộ lọc chính màu cam */
+.filter-btn.filter-main {
+  border-color: #e87a00;
+  color: #e87a00;
+}

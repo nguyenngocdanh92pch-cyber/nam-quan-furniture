@@ -1,0 +1,139 @@
+<section
+  class="relative w-full h-[500px] md:h-[700px] overflow-hidden group/hero"
+>
+  <!-- Video nền -->
+  <video
+    class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto z-[1] -translate-x-1/2 -translate-y-1/2 object-cover"
+    autoplay
+    loop
+    muted
+    playsinline
+  >
+    <source src="assets/section1/video.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Lớp phủ mờ 30% -->
+  <div class="absolute inset-0 bg-black/30 z-[2]"></div>
+
+  <!-- Khối nội dung chính -->
+  <div class="absolute inset-0 z-[3] flex flex-col">
+    <!-- SUB-HEADER (Menu & Search) -->
+    <div
+      class="flex flex-col md:flex-row justify-between items-center px-5 md:px-[85px] pt-5 md:pt-0 h-auto md:h-[70px] w-full gap-[15px] md:gap-0 z-10"
+    >
+      <!-- Menu Điều Hướng -->
+      <nav
+        class="w-full md:w-[668px] overflow-x-auto pb-1 md:pb-0 scrollbar-hide"
+      >
+        <ul
+          class="flex justify-start md:justify-between gap-5 md:gap-0 min-w-max md:min-w-0"
+        >
+          <!-- Nút mặc định được chọn (thêm id để JS dễ quản lý) -->
+          <li class="relative">
+            <a
+              href="#"
+              class="sub-nav-link nav-active inline-block font-bevietnam text-lg text-brand-functional25 transition-all pb-1 hover:opacity-80"
+              >Trang chủ</a
+            >
+            <!-- Đường gạch chân của Tailwind cho phần tử active -->
+            <span
+              class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-white rounded-sm"
+            ></span>
+          </li>
+
+          <!-- Các nút còn lại -->
+          <li class="relative group/link">
+            <a
+              href="#"
+              class="sub-nav-link inline-block font-bevietnam text-lg text-brand-functional25 transition-all pb-1 hover:opacity-80"
+              >Sản phẩm</a
+            >
+            <span
+              class="nav-indicator absolute bottom-0 left-0 w-0 h-[2px] bg-white rounded-sm transition-all group-hover/link:w-full"
+            ></span>
+          </li>
+          <li class="relative group/link">
+            <a
+              href="#"
+              class="sub-nav-link inline-block font-bevietnam text-lg text-brand-functional25 transition-all pb-1 hover:opacity-80"
+              >Bộ sưu tập</a
+            >
+            <span
+              class="nav-indicator absolute bottom-0 left-0 w-0 h-[2px] bg-white rounded-sm transition-all group-hover/link:w-full"
+            ></span>
+          </li>
+          <li class="relative group/link">
+            <a
+              href="#"
+              class="sub-nav-link inline-block font-bevietnam text-lg text-brand-functional25 transition-all pb-1 hover:opacity-80"
+              >Dự án</a
+            >
+            <span
+              class="nav-indicator absolute bottom-0 left-0 w-0 h-[2px] bg-white rounded-sm transition-all group-hover/link:w-full"
+            ></span>
+          </li>
+          <li class="relative group/link">
+            <a
+              href="#"
+              class="sub-nav-link inline-block font-bevietnam text-lg text-brand-functional25 transition-all pb-1 hover:opacity-80"
+              >Tin tức</a
+            >
+            <span
+              class="nav-indicator absolute bottom-0 left-0 w-0 h-[2px] bg-white rounded-sm transition-all group-hover/link:w-full"
+            ></span>
+          </li>
+          <li class="relative group/link">
+            <a
+              href="#"
+              class="sub-nav-link inline-block font-bevietnam text-lg text-brand-functional25 transition-all pb-1 hover:opacity-80"
+              >Liên hệ</a
+            >
+            <span
+              class="nav-indicator absolute bottom-0 left-0 w-0 h-[2px] bg-white rounded-sm transition-all group-hover/link:w-full"
+            ></span>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Khung Tìm Kiếm (Tích hợp focus-within của Tailwind) -->
+      <div
+        class="sub-search-box flex items-center bg-[#f1faee] border border-transparent rounded w-full md:w-[440px] px-4 py-2.5 transition-all duration-300 focus-within:bg-white focus-within:border-[#175214] focus-within:shadow-[0_4px_12px_rgba(0,0,0,0.15)] focus-within:scale-[1.02]"
+      >
+        <img
+          src="assets/section1/search.png"
+          alt="Search"
+          class="search-icon w-[18px] h-[18px] mr-3 cursor-pointer transition-transform duration-200 hover:scale-110"
+        />
+        <input
+          type="text"
+          placeholder="Tìm kiếm"
+          class="search-input w-full bg-transparent outline-none font-sans text-base text-black placeholder:text-black"
+        />
+      </div>
+    </div>
+
+    <!-- KHỐI CHỮ Ở GIỮA -->
+    <div
+      class="absolute top-1/2 -translate-y-1/4 md:-translate-y-0 md:top-[357px] left-5 md:left-[143px] flex flex-col gap-6 w-[calc(100%-40px)] md:w-[530px] z-10"
+    >
+      <h1
+        class="font-manrope font-extrabold text-2xl md:text-[32px] leading-[36px] md:leading-[48px] text-brand-functional25 uppercase m-0"
+      >
+        MỖI KHÔNG GIAN<br />MỘT CÂU CHUYỆN RIÊNG
+      </h1>
+      <p
+        class="font-bevietnam font-normal italic text-base md:text-[24px] leading-[24px] md:leading-[36px] text-brand-functional25 m-0"
+      >
+        Kiến tạo không gian sống tinh tế với những giải pháp nội thất hiện đại,
+        hài hòa giữa thẩm mỹ, công năng và cảm hứng sống.
+      </p>
+
+      <!-- Nút Khám phá ngay -->
+      <a
+        href="#"
+        class="hero-btn font-bevietnam font-semibold text-lg text-brand-functional25 border-b border-white pb-0.5 w-fit transition-all duration-300 hover:bg-white hover:text-[#175214] hover:border-[#175214] hover:px-4 hover:rounded"
+        >Khám phá ngay &rarr;</a
+      >
+    </div>
+  </div>
+</section>

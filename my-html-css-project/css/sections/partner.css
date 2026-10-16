@@ -1,0 +1,118 @@
+.partner-section {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.partner-container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 24px; /* Tránh sát lề trên màn hình nhỏ */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 48px;
+}
+
+/* Tiêu đề */
+.partner-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #219653;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+/* =========================================
+   HIỆU ỨNG LOGO CHẠY NGANG (MARQUEE)
+========================================= */
+
+/* Khung bọc ngoài cùng: Cực kỳ quan trọng để cắt bỏ phần logo tràn ra khỏi 1280px */
+.partner-list-wrapper {
+  width: 100%;
+  height: 120px; /* Cố định chiều cao 120px theo Figma (hoặc 96px nếu bạn chỉ tính box xám) */
+  overflow: hidden; /* CẮT BỎ PHẦN THỪA CHẠY RA NGOÀI KHUNG */
+  position: relative;
+
+  /* Tạo thêm hiệu ứng mờ (fade) ở 2 mép trái phải cho đẹp (Tùy chọn) */
+  /* -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); */
+}
+
+/* Thanh ray (Track) dài vô tận chứa tất cả logo */
+.partner-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+
+  /* Căn giữa theo chiều dọc nếu chiều cao wrapper lớn hơn chiều cao item */
+  align-items: center;
+  height: 100%;
+
+  animation: scrollMarquee 20s linear infinite;
+}
+
+/* Tạm dừng khi rê chuột */
+.partner-track:hover {
+  animation-play-state: paused;
+}
+
+/* Khung bọc từng logo */
+.partner-item {
+  flex: 0 0 160px; /* Khóa cứng chiều rộng 160px */
+  height: 96px; /* Chiều cao cố định */
+
+  background-color: #f8f9fa;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.partner-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.partner-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Cuộn qua trái chính xác -1232px. 
+       Nếu thấy giật ở cuối chu kỳ, hãy thử thêm hoặc bớt 16px (1 khoảng gap). */
+    transform: translateX(-1232px);
+  }
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+  .partner-track {
+    animation-duration: 25s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .partner-track {
+    animation-duration: 30s;
+  }
+}

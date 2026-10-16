@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;1,400&display=swap");
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-functional-25: #fdfdfd; /* Theo thông số Figma */
+  --color-text-main: #333333; /* Default cho text thông thường */
+  --color-overlay-dark: rgba(0, 0, 0, 0.4);
+
+  /* Typography Foundations */
+  --font-family-primary: "Manrope", sans-serif;
+
+  /* Font Sizes */
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-hero: 32px; /* Từ thông số thẻ Heading */
+
+  /* Font Weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800; /* Từ thông số Figma */
+
+  /* Line Heights */
+  --lh-tight: 1.2;
+  --lh-base: 1.5;
+  --lh-hero: 48px; /* Tỷ lệ 1.5 (48/32) từ Figma */
+
+  /* Spacing System (Cấp số nhân 4 hoặc 8 chuẩn UI/UX) */
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+}
+
+/* --- 3. MODERN CSS RESET --- */
+/* Reset Box-model để kiểm soát layout dễ dàng hơn */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* Đặt base 16px cho rem */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: var(--lh-base);
+  color: var(--color-text-main);
+  background-color: var(--color-white);
+
+  /* Rendering chữ sắc nét hơn trên MacOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Tránh thanh cuộn ngang khi layout tràn */
+  overflow-x: hidden;
+}
+
+/* Reset Lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Media mặc định */
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- 4. BASE TYPOGRAPHY & ELEMENTS --- */
+/* Định nghĩa base cho thẻ Heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-bold);
+  line-height: var(--lh-tight);
+  color: inherit;
+}
+
+/* Utility class cho thẻ Hero Text dựa trên Design_opt_03 */
+.text-hero {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-extrabold);
+  font-size: var(--text-hero);
+  line-height: var(--lh-hero);
+  color: var(--color-functional-25);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+/* Class hỗ trợ text đoạn văn trên background tối (đoạn text mô tả dưới title) */
+.text-hero-desc {
+  font-family: var(--font-family-primary);
+  font-size: var(--text-base);
+  line-height: var(--lh-base);
+  color: var(--color-functional-25);
+  font-style: italic; /* Dựa trên quan sát trực quan đoạn text mô tả */
+}
+
+.fs-tab {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-dot {
+  cursor: pointer;
+  transition: border 0.2s ease;
+}

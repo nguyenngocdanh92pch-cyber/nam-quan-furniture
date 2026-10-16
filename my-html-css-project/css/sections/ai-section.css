@@ -1,0 +1,327 @@
+.ai-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+
+.ai-container {
+  width: 1390px;
+  height: 745px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 24px 56px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Đẩy bảng trái - phải ra xa nhau */
+  align-items: stretch;
+  gap: 40px;
+
+  /* Cài ảnh nền cho khung lớn */
+  background-image: url("../../assets/section12/background.png");
+  background-size: cover;
+  background-position: center;
+
+  /* Thêm viền xanh nhạt bao quanh */
+  border: 1px solid #b0ebad;
+}
+
+/* =========================================
+   THIẾT LẬP CHUNG CHO CẢ 2 BẢNG
+========================================= */
+.ai-input-card,
+.ai-result-card {
+  height: 663px;
+  border-radius: 16px;
+  padding: 32px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Hiệu ứng kính mờ (Background Blur: 12.6) */
+  backdrop-filter: blur(12.6px);
+  -webkit-backdrop-filter: blur(12.6px);
+
+  /* Viền: màu #85FF87 với 55% độ mờ */
+  border: 1px solid rgba(133, 255, 135, 0.55);
+
+  /* Xóa box-shadow mặc định vì thiết kế chỉ dùng kính mờ */
+  box-shadow: none;
+}
+
+/* CARD NHẬP LIỆU (BÊN TRÁI) */
+.ai-input-card {
+  width: 470px;
+  /* Nền: màu #85FF87 với 8% độ mờ */
+  background: rgba(133, 255, 135, 0.08);
+}
+
+/* CARD KẾT QUẢ (BÊN PHẢI) */
+.ai-result-card {
+  width: 685px;
+  /* Nền: màu #009302 với 8% độ mờ */
+  background: rgba(0, 147, 2, 0.08);
+
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.ai-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Khoảng cách nhỏ giữa nhãn AI và Tiêu đề */
+}
+
+/* Badge AI */
+.ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #219653;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.ai-badge img {
+  width: 16px;
+}
+
+/* Tiêu đề chung */
+.ai-title,
+.ai-result-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #181d27; /* Đổi thành màu xám đen đậm */
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Các nhóm form */
+.ai-form-group,
+.ai-result-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ai-form-group > label,
+.ai-result-group > label {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #181d27;
+}
+
+/* Dropdown Năm sinh */
+.ai-select-wrap {
+  position: relative;
+  width: 100%;
+}
+.ai-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+}
+.ai-select {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #d5d7da;
+  border-radius: 8px;
+  padding: 0 16px 0 44px; /* Chừa không gian cho icon */
+  appearance: none;
+  background-color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Custom Radio Button (Giới tính) */
+.ai-radio-group {
+  display: flex;
+  gap: 48px; /* Tách xa chữ Nam và Nữ ra */
+}
+.ai-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Khoảng cách giữa nút tròn và chữ */
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #181d27;
+  cursor: pointer;
+}
+.ai-radio-label input[type="radio"] {
+  display: none;
+} /* Giấu radio thật */
+.ai-radio-custom {
+  width: 18px; /* Kích thước nút Radio tròn */
+  height: 18px;
+  border: 1.5px solid #999;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Hiệu ứng khi được click chọn */
+.ai-radio-label input[type="radio"]:checked + .ai-radio-custom {
+  border-color: #181d27; /* Đổi viền đen khi chọn */
+}
+.ai-radio-label input[type="radio"]:checked + .ai-radio-custom::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #181d27;
+  border-radius: 50%;
+}
+
+/* LƯỚI HƯỚNG NHÀ */
+.ai-direction-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px; /* Khoảng cách đều 12px giữa các nút */
+}
+.ai-dir-btn {
+  cursor: pointer;
+}
+.ai-dir-btn input[type="radio"] {
+  display: none;
+}
+.ai-dir-btn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #d5d7da;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 13px; /* Ép cỡ chữ để không bị tràn 4 cột */
+  font-weight: 500;
+  color: #333333;
+  transition: all 0.2s;
+}
+/* Khi bấm vào nút sẽ đổi sang viền cam chữ cam */
+.ai-dir-btn input[type="radio"]:checked + span {
+  border-color: #e87a00;
+  color: #e87a00;
+  background-color: #fff2e6;
+  font-weight: 600;
+}
+
+/* NÚT PHÂN TÍCH NGAY */
+.ai-submit-btn {
+  width: 100%;
+  height: 56px;
+  background: linear-gradient(180deg, #00c64a 0%, #008b34 100%);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.ai-submit-btn:hover {
+  transform: translateY(-2px);
+}
+.ai-submit-btn img {
+  width: 20px;
+}
+
+/* Bảng kết quả dùng tiêu đề xanh */
+.ai-result-title {
+  color: #175214;
+}
+
+/* Định dạng các ô kết quả (Mệnh) */
+.ai-result-box {
+  height: 48px;
+  border: 1px solid #d5d7da;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.text-green {
+  color: #219653;
+}
+
+/* Danh sách hướng tốt */
+.ai-good-dir-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.ai-good-dir {
+  height: 40px;
+  border: 1px solid #d5d7da;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+/* Danh sách màu sắc hợp mệnh */
+.ai-color-list {
+  display: flex;
+  gap: 16px;
+}
+.ai-color-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Text gợi ý */
+.ai-suggestion-text {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  margin: 0;
+}
+.ai-suggestion-text {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 27px;
+  color: #181d27;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .ai-container {
+    flex-direction: column;
+    height: auto;
+    padding: 32px;
+  }
+  .ai-input-card,
+  .ai-result-card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,79 @@
+.header-actions {
+  display: flex;
+  justify-content: space-between; /* Đẩy Logo qua trái, Khối Icon qua phải */
+  align-items: center;
+  padding-left: 85px; /* Cách lề trái 85px */
+  padding-right: 85px; /* Cách lề phải 85px */
+  height: 80px;
+  background-color: #ffffff;
+}
+
+/* Kích thước Logo */
+.logo-img {
+  width: 101px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Khối bao bọc các Icon bên phải */
+.menu-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px; /* Khoảng cách giữa Tài khoản, Giỏ hàng... */
+}
+
+/* Từng mục Icon (đưa hình lên trên chữ) */
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #175214;
+  text-decoration: none;
+}
+
+.action-item:hover {
+  opacity: 0.7;
+}
+
+.action-item img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Khối chuyển ngôn ngữ VN/EN */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  background-color: #2e9f3b;
+  border-radius: 20px;
+  padding: 2px 10px 2px 2px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.lang-active {
+  background-color: #ffffff;
+  color: #2e9f3b;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lang-inactive {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 8px;
+}

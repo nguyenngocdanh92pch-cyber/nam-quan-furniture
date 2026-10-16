@@ -1,0 +1,104 @@
+/* Bao bọc toàn bộ danh sách thẻ (đặt trong index.html) */
+.category-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin: 80px auto;
+  padding: 0 85px;
+  overflow-x: auto;
+}
+
+.category-card {
+  position: relative;
+  display: block;
+
+  flex: 1;
+  min-width: 150px;
+  height: 255px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* Ảnh nền */
+.category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Hiệu ứng khi hover (phóng to ảnh nhẹ) */
+.category-card:hover .category-img {
+  transform: scale(1.05);
+}
+
+/* Lớp phủ gradient đen dưới chân để chữ trắng nổi bật */
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Phủ 100% chiều cao */
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Chữ tiêu đề (Sofa, Ghế...) */
+.category-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+
+  z-index: 2;
+  margin: 0;
+  width: 100%;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Giảm padding cho khoảng trống 2 bên */
+  .category-list {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category-list {
+    padding: 0 20px;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-card {
+    flex: 0 0 160px;
+    height: 200px;
+    scroll-snap-align: start; /* Hỗ trợ trượt theo từng thẻ (snap) */
+  }
+
+  .category-title {
+    font-size: 18px; /* Giảm font chữ cho vừa thẻ */
+  }
+}
+.gradient-bg-wrapper {
+  /* Màu nền chuyển từ trắng (trên cùng) xuống xanh ngọc (#E6F7EA) rồi lại về trắng (dưới cùng) */
+  background: linear-gradient(180deg, #ffffff 0%, #b6edbf 50%, #ffffff 100%);
+  width: 100%;
+  padding-top: 80px; /* Thêm khoảng cách với Hero Section */
+  padding-bottom: 60px; /* Thêm khoảng cách với phần bên dưới */
+}
+
+.category-list {
+  margin: 0 auto 180px auto;
+}

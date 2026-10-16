@@ -1,0 +1,166 @@
+.consult-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.consult-container {
+  width: 100%;
+  max-width: 1440px;
+  height: 479px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* TẠO DẢI MÀU XANH LÁ MẠ BẰNG CSS */
+.consult-container::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 100%;
+  height: 280px;
+  background-color: #d7f5d6;
+  z-index: 1;
+}
+
+.consult-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 533px;
+  height: 479px;
+  background-image: url("../../assets/section11/image.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+/* Khối bao bọc chữ và form */
+.consult-form-box {
+  width: calc(100% - 533px);
+  padding-right: 120px;
+
+  padding-bottom: 110px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  z-index: 3;
+  position: relative;
+}
+
+/* Tiêu đề */
+.consult-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #219653;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  /* ÉP TIÊU ĐỀ LUÔN TRÊN 1 DÒNG DUY NHẤT */
+  white-space: nowrap;
+}
+
+/* Mô tả */
+.consult-desc {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #181d27;
+  line-height: 1.5;
+  margin: 0 0 40px 0;
+}
+
+/* Khu vực Form */
+.consult-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+/* Ô nhập liệu */
+.consult-input {
+  width: 275px;
+  height: 48px;
+  background-color: #fdfdfd;
+  border: 0.5px solid #d5d7da;
+  border-radius: 4px;
+
+  padding: 8px 24px;
+
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  box-sizing: border-box; /* giúp padding không làm phình to width 275px */
+  transition: border-color 0.3s;
+}
+
+.consult-input:focus {
+  border-color: #219653;
+}
+
+/* Nút Gửi yêu cầu */
+.consult-btn {
+  height: 48px;
+  padding: 0 32px;
+  background-color: #00a63e; /* Xanh lá đậm cho nút */
+  /* Tạo dải màu viền bóng giống thiết kế */
+  background: linear-gradient(180deg, #00c64a 0%, #008b34 100%);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0px 4px 6px rgba(0, 166, 62, 0.3);
+}
+
+.consult-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 166, 62, 0.4);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+  .consult-form-box {
+    width: 100%;
+    padding-right: 40px;
+  }
+  .consult-title {
+    font-size: 24px;
+    white-space: normal; /* Cho phép rớt dòng trên màn hình nhỏ để tránh tràn màn hình */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .consult-form-box {
+    padding-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .consult-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .consult-input,
+  .consult-btn {
+    width: 100%;
+    max-width: 320px; /* Trên mobile sẽ tự động co giãn */
+  }
+}

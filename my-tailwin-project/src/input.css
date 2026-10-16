@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Animation đối tác */
+  @keyframes scrollMarquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1232px);
+    }
+  }
+  .animate-marquee {
+    animation: scrollMarquee 20s linear infinite;
+  }
+  /* Ẩn thanh cuộn ngang */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  /* Class dùng chung cho Knowledge Tabs xử lý bằng JS */
+  .k-tab.active {
+    @apply bg-brand-lightOrange border-brand-orange text-brand-orange font-semibold;
+  }
+}

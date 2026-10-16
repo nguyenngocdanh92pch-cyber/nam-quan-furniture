@@ -1,0 +1,281 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden; /* Cắt bỏ phần video tràn ra ngoài */
+}
+
+/* --- XỬ LÝ VIDEO NỀN --- */
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1; /* Nằm dưới cùng */
+  transform: translateX(-50%) translateY(-50%); /* Căn giữa video */
+  object-fit: cover;
+}
+
+/* --- LỚP PHỦ MÀU ĐEN (OPACITY 30%) --- */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2; /* Nằm trên video, dưới nội dung */
+}
+
+/* --- KHỐI CHỨA NỘI DUNG (NẰM TRÊN CÙNG) --- */
+.hero-content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3; /* Nằm trên cùng */
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 85px;
+  height: 70px;
+  width: 100%;
+  z-index: 10; /* Đảm bảo nổi lên trên lớp phủ video */
+}
+
+/* Menu Navigation */
+.sub-nav-list {
+  display: flex;
+  justify-content: space-between; /* Tự động chia đều khoảng cách giữa các chữ */
+  width: 668px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-nav-link {
+  color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.sub-nav-link:hover,
+.sub-nav-link.active {
+  opacity: 0.8;
+}
+
+/* Search Box */
+.sub-search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f1faee;
+  border-radius: 4px;
+  padding: 10px 16px;
+  width: 440px;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-family: "HungHau", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  line-height: 100%;
+}
+
+.search-input::placeholder {
+  color: #000000;
+  font-weight: 400;
+}
+
+.hero-text-block {
+  position: absolute;
+  top: 357px;
+  left: 143px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Khoảng cách giữa các thành phần */
+  width: 530px; /* Chiều rộng khung chữ */
+  z-index: 10;
+}
+
+/* 1. Tiêu đề chính */
+.hero-text-block .text-hero {
+  font-family: var(--font-family-primary, "Manrope", sans-serif);
+  font-weight: 800; /* ExtraBold */
+  font-size: 32px;
+  line-height: 48px;
+  color: #ffffff; /* Hoặc var(--color-functional-25) nếu mã màu trắng là #FDFDFD */
+  text-transform: uppercase; /* In hoa */
+  margin: 0; /* Xóa margin mặc định của thẻ h1 */
+}
+
+/* 2. Đoạn văn mô tả */
+.hero-text-block .text-hero-desc {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-style: italic; /* In nghiêng */
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* 3. Nút bấm (Link) */
+.hero-text-block .hero-btn {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content; /* Nút chỉ rộng bằng nội dung chữ */
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 2px; /* Khoảng cách từ chữ xuống đường gạch dưới */
+  transition: opacity 0.3s ease;
+}
+
+.hero-text-block .hero-btn:hover {
+  opacity: 0.7; /* Hiệu ứng mờ đi khi di chuột vào */
+}
+
+.sub-nav-link {
+  color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400; /* Chữ mỏng lúc bình thường */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative; /* Dùng làm gốc để vẽ đường gạch chân */
+  padding-bottom: 4px; /* Tạo khoảng trống cho gạch chân */
+  opacity: 0.8; /* Hơi mờ một chút lúc chưa chọn */
+}
+
+/* Khi hover (di chuột) thì sáng lên */
+.sub-nav-link:hover {
+  opacity: 1;
+}
+
+/* KHI ĐANG ĐƯỢC CHỌN (ACTIVE) */
+.sub-nav-link.active {
+  font-weight: 700; /* Làm chữ đậm lên rõ rệt */
+  opacity: 1; /* Sáng hoàn toàn */
+}
+
+/* Vẽ đường gạch chân màu trắng dưới chữ đang chọn */
+.sub-nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.sub-search-box {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* Hiệu ứng khi đang gõ chữ */
+.sub-search-box:focus-within {
+  background-color: #ffffff;
+  border: 1px solid #175214; /* Viền xanh Nam Quan */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02); /* Phóng to nhẹ khung tìm kiếm */
+}
+
+.search-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1024px) {
+  /* Giảm padding 2 bên cho Sub-header */
+  .sub-header {
+    padding: 0 40px;
+  }
+
+  /* Căn chỉnh lại khối chữ */
+  .hero-text-block {
+    left: 40px; /* Bám theo padding của Sub-header */
+    width: calc(
+      100% - 80px
+    ); /* Tự động co giãn theo màn hình (trừ đi padding 2 bên) */
+    max-width: 530px; /* Vẫn giữ tối đa 530px nếu màn hình còn rộng */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Màn hình điện thoại/Tablet nhỏ */
+  .hero-section {
+    height: 500px; /* Thu nhỏ chiều cao video nền lại */
+  }
+
+  .sub-header {
+    padding: 0 20px;
+    height: auto;
+    flex-direction: column; /* Đẩy thanh tìm kiếm xuống dưới menu */
+    gap: 15px;
+    padding-top: 20px;
+  }
+
+  .sub-nav-list {
+    width: 100%; /* Cho menu chiếm toàn chiều rộng */
+    justify-content: flex-start;
+    gap: 20px;
+    overflow-x: auto; /* Cho phép cuộn ngang menu nếu quá dài */
+    padding-bottom: 5px;
+  }
+
+  .sub-search-box {
+    width: 100%; /* Tìm kiếm chiếm full màn hình */
+  }
+
+  .hero-text-block {
+    left: 20px;
+    width: calc(100% - 40px);
+    transform: translateY(-20%); /* Đẩy chữ lên một chút để không bị che */
+  }
+
+  /* Thu nhỏ chữ cho vừa màn hình điện thoại */
+  .hero-text-block .text-hero {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .hero-text-block .text-hero-desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

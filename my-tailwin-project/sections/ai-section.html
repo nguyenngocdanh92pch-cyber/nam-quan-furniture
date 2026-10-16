@@ -1,0 +1,319 @@
+<section class="w-full flex justify-center py-10 bg-white">
+  <div
+    class="w-[1390px] h-auto lg:h-[745px] rounded-t-[24px] p-6 lg:py-6 lg:px-14 flex flex-col lg:flex-row justify-between items-stretch gap-10 bg-[url('../../assets/section12/background.png')] bg-cover bg-center border border-[#b0ebad]"
+  >
+    <!-- ==========================================
+         BẢNG NHẬP LIỆU (BÊN TRÁI)
+    =========================================== -->
+    <div
+      class="w-full lg:w-[470px] bg-[#85ff87]/[0.08] backdrop-blur-[12.6px] border border-[#85ff87]/55 h-auto lg:h-[663px] rounded-2xl p-6 lg:p-8 flex flex-col justify-between gap-6 lg:gap-0 mt-[40px] lg:mt-[32px]"
+    >
+      <!-- Header -->
+      <div class="flex flex-col gap-3">
+        <div
+          class="inline-flex items-center gap-2 text-[#219653] font-bevietnam text-sm font-bold uppercase"
+        >
+          <img
+            src="assets/icons/sparkles.png"
+            class="w-4 h-4 object-contain"
+            alt="AI Icon"
+          />
+          AI PHONG THỦY NAM QUAN
+        </div>
+        <h2
+          class="font-manrope text-[32px] leading-[1.2] font-extrabold text-[#181d27] m-0"
+        >
+          TRỢ LÝ AI PHONG THỦY
+        </h2>
+      </div>
+
+      <!-- Năm sinh -->
+      <div class="flex flex-col gap-4">
+        <label class="font-bevietnam text-base font-bold text-[#181d27]"
+          >Năm sinh</label
+        >
+        <div class="relative w-full">
+          <img
+            src="assets/icons/calendar.png"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-[18px] h-[18px] object-contain"
+            alt="Calendar"
+          />
+          <select
+            class="w-full h-12 border border-[#d5d7da] rounded-lg pl-[44px] pr-4 bg-white font-bevietnam text-sm font-medium text-[#333333] outline-none appearance-none cursor-pointer"
+          >
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Giới tính -->
+      <div class="flex flex-col gap-4">
+        <label class="font-bevietnam text-base font-bold text-[#181d27]"
+          >Giới tính</label
+        >
+        <div class="flex gap-12">
+          <!-- Radio Nam -->
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input
+              type="radio"
+              name="gender"
+              value="nam"
+              class="peer hidden"
+              checked
+            />
+            <span
+              class="w-[18px] h-[18px] border-[1.5px] border-[#999] rounded-full flex justify-center items-center peer-checked:border-[#181d27] relative after:content-[''] after:w-[10px] after:h-[10px] after:bg-[#181d27] after:rounded-full after:hidden peer-checked:after:block transition-colors"
+            ></span>
+            <span class="font-bevietnam text-sm font-medium text-[#181d27]"
+              >Nam</span
+            >
+          </label>
+          <!-- Radio Nữ -->
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input type="radio" name="gender" value="nu" class="peer hidden" />
+            <span
+              class="w-[18px] h-[18px] border-[1.5px] border-[#999] rounded-full flex justify-center items-center peer-checked:border-[#181d27] relative after:content-[''] after:w-[10px] after:h-[10px] after:bg-[#181d27] after:rounded-full after:hidden peer-checked:after:block transition-colors"
+            ></span>
+            <span class="font-bevietnam text-sm font-medium text-[#181d27]"
+              >Nữ</span
+            >
+          </label>
+        </div>
+      </div>
+
+      <!-- Hướng nhà chính -->
+      <div class="flex flex-col gap-4">
+        <label class="font-bevietnam text-base font-bold text-[#181d27]"
+          >Hướng nhà chính</label
+        >
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <label class="cursor-pointer"
+            ><input
+              type="radio"
+              name="direction"
+              value="dong"
+              class="peer hidden"
+            /><span
+              class="flex items-center justify-center h-10 border border-[#d5d7da] rounded-lg bg-white font-bevietnam text-[13px] font-medium text-[#333333] transition-all peer-checked:border-[#e87a00] peer-checked:text-[#e87a00] peer-checked:bg-[#fff2e6] peer-checked:font-semibold"
+              >Đông</span
+            ></label
+          >
+          <label class="cursor-pointer"
+            ><input
+              type="radio"
+              name="direction"
+              value="tay"
+              class="peer hidden"
+            /><span
+              class="flex items-center justify-center h-10 border border-[#d5d7da] rounded-lg bg-white font-bevietnam text-[13px] font-medium text-[#333333] transition-all peer-checked:border-[#e87a00] peer-checked:text-[#e87a00] peer-checked:bg-[#fff2e6] peer-checked:font-semibold"
+              >Tây</span
+            ></label
+          >
+          <label class="cursor-pointer"
+            ><input
+              type="radio"
+              name="direction"
+              value="nam"
+              class="peer hidden"
+            /><span
+              class="flex items-center justify-center h-10 border border-[#d5d7da] rounded-lg bg-white font-bevietnam text-[13px] font-medium text-[#333333] transition-all peer-checked:border-[#e87a00] peer-checked:text-[#e87a00] peer-checked:bg-[#fff2e6] peer-checked:font-semibold"
+              >Nam</span
+            ></label
+          >
+          <label class="cursor-pointer"
+            ><input
+              type="radio"
+              name="direction"
+              value="bac"
+              class="peer hidden"
+            /><span
+              class="flex items-center justify-center h-10 border border-[#d5d7da] rounded-lg bg-white font-bevietnam text-[13px] font-medium text-[#333333] transition-all peer-checked:border-[#e87a00] peer-checked:text-[#e87a00] peer-checked:bg-[#fff2e6] peer-checked:font-semibold"
+              >Bắc</span
+            ></label
+          >
+
+          <label class="cursor-pointer"
+            ><input
+              type="radio"
+              name="direction"
+              value="dongnam"
+              class="peer hidden"
+              checked
+            /><span
+              class="flex items-center justify-center h-10 border border-[#d5d7da] rounded-lg bg-white font-bevietnam text-[13px] font-medium text-[#333333] transition-all peer-checked:border-[#e87a00] peer-checked:text-[#e87a00] peer-checked:bg-[#fff2e6] peer-checked:font-semibold"
+              >Đông Nam</span
+            ></label
+          >
+          <label class="cursor-pointer"
+            ><input
+              type="radio"
+              name="direction"
+              value="dongbac"
+              class="peer hidden"
+            /><span
+              class="flex items-center justify-center h-10 border border-[#d5d7da] rounded-lg bg-white font-bevietnam text-[13px] font-medium text-[#333333] transition-all peer-checked:border-[#e87a00] peer-checked:text-[#e87a00] peer-checked:bg-[#fff2e6] peer-checked:font-semibold"
+              >Đông Bắc</span
+            ></label
+          >
+          <label class="cursor-pointer"
+            ><input
+              type="radio"
+              name="direction"
+              value="taynam"
+              class="peer hidden"
+            /><span
+              class="flex items-center justify-center h-10 border border-[#d5d7da] rounded-lg bg-white font-bevietnam text-[13px] font-medium text-[#333333] transition-all peer-checked:border-[#e87a00] peer-checked:text-[#e87a00] peer-checked:bg-[#fff2e6] peer-checked:font-semibold"
+              >Tây Nam</span
+            ></label
+          >
+          <label class="cursor-pointer"
+            ><input
+              type="radio"
+              name="direction"
+              value="taybac"
+              class="peer hidden"
+            /><span
+              class="flex items-center justify-center h-10 border border-[#d5d7da] rounded-lg bg-white font-bevietnam text-[13px] font-medium text-[#333333] transition-all peer-checked:border-[#e87a00] peer-checked:text-[#e87a00] peer-checked:bg-[#fff2e6] peer-checked:font-semibold"
+              >Tây Bắc</span
+            ></label
+          >
+        </div>
+      </div>
+
+      <!-- Nút phân tích -->
+      <button
+        onclick="showAIResult()"
+        class="w-full h-14 bg-gradient-to-b from-[#00c64a] to-[#008b34] border-none rounded-lg text-white font-bevietnam text-base font-bold flex items-center justify-center gap-2 cursor-pointer transition-transform hover:-translate-y-0.5 shadow-md"
+      >
+        <img
+          src="assets/icons/sparkles-white.png"
+          alt="Phân tích"
+          class="w-5 h-5 object-contain"
+        />
+        PHÂN TÍCH NGAY
+      </button>
+    </div>
+
+    <!-- ==========================================
+         BẢNG KẾT QUẢ (BÊN PHẢI) 
+    =========================================== -->
+    <div
+      id="aiResultBox"
+      class="w-full lg:w-[685px] bg-[#009302]/[0.08] backdrop-blur-[12.6px] border border-[#85ff87]/55 h-auto lg:h-[663px] rounded-2xl p-6 lg:p-8 flex flex-col justify-between gap-6 lg:gap-0 mt-[40px] lg:mt-[32px] opacity-100 transition-opacity duration-500"
+    >
+      <!-- Tiêu đề -->
+      <h2
+        class="font-manrope text-[32px] leading-[1.2] font-extrabold text-[#175214] m-0"
+      >
+        KẾT QUẢ THAM KHẢO
+      </h2>
+
+      <!-- Mệnh -->
+      <div class="flex flex-col gap-4">
+        <label class="font-bevietnam text-base font-bold text-[#181d27]"
+          >Mệnh của bạn</label
+        >
+        <div
+          class="w-full h-12 border border-[#d5d7da] rounded-lg flex items-center justify-center bg-white font-bevietnam text-lg font-bold text-[#219653]"
+        >
+          Mộc
+        </div>
+      </div>
+
+      <!-- Giới tính (Disabled) -->
+      <div class="flex flex-col gap-4">
+        <label class="font-bevietnam text-base font-bold text-[#181d27]"
+          >Giới tính</label
+        >
+        <div class="flex gap-12 pointer-events-none opacity-80">
+          <label class="flex items-center gap-3">
+            <input type="radio" class="peer hidden" checked disabled />
+            <span
+              class="w-[18px] h-[18px] border-[1.5px] border-[#999] rounded-full flex justify-center items-center peer-checked:border-[#181d27] relative after:content-[''] after:w-[10px] after:h-[10px] after:bg-[#181d27] after:rounded-full after:hidden peer-checked:after:block"
+            ></span>
+            <span class="font-bevietnam text-sm font-medium text-[#181d27]"
+              >Nam</span
+            >
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="radio" class="peer hidden" disabled />
+            <span
+              class="w-[18px] h-[18px] border-[1.5px] border-[#999] rounded-full flex justify-center items-center relative"
+            ></span>
+            <span class="font-bevietnam text-sm font-medium text-[#181d27]"
+              >Nữ</span
+            >
+          </label>
+        </div>
+      </div>
+
+      <!-- Hướng tốt -->
+      <div class="flex flex-col gap-4">
+        <label class="font-bevietnam text-base font-bold text-[#181d27]"
+          >Hướng tốt</label
+        >
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div
+            class="h-10 border border-[#d5d7da] rounded-lg flex items-center justify-center bg-white font-bevietnam text-sm text-[#333333]"
+          >
+            Đông
+          </div>
+          <div
+            class="h-10 border border-[#d5d7da] rounded-lg flex items-center justify-center bg-white font-bevietnam text-sm text-[#333333]"
+          >
+            Đông Nam
+          </div>
+          <div
+            class="h-10 border border-[#d5d7da] rounded-lg flex items-center justify-center bg-white font-bevietnam text-sm text-[#333333]"
+          >
+            Nam
+          </div>
+          <div
+            class="h-10 border border-[#d5d7da] rounded-lg flex items-center justify-center bg-white font-bevietnam text-sm text-[#333333]"
+          >
+            Bắc
+          </div>
+        </div>
+      </div>
+
+      <!-- Màu sắc hợp mệnh -->
+      <div class="flex flex-col gap-4">
+        <label class="font-bevietnam text-base font-bold text-[#181d27]"
+          >Màu sắc hợp mệnh</label
+        >
+        <div class="flex gap-4">
+          <div
+            class="w-6 h-6 rounded-full border border-black/10 bg-[#00ff00]"
+          ></div>
+          <div
+            class="w-6 h-6 rounded-full border border-black/10 bg-[#556b2f]"
+          ></div>
+          <div
+            class="w-6 h-6 rounded-full border border-black/10 bg-[#0077cc]"
+          ></div>
+          <div
+            class="w-6 h-6 rounded-full border border-black/10 bg-[#333333]"
+          ></div>
+          <div
+            class="w-6 h-6 rounded-full border border-black/10 bg-[#8b4513]"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Gợi ý bố trí -->
+      <div class="flex flex-col gap-4">
+        <label class="font-bevietnam text-base font-bold text-[#181d27]"
+          >Gợi ý bố trí</label
+        >
+        <p
+          class="font-bevietnam text-lg font-bold italic leading-[27px] text-[#181d27] m-0"
+        >
+          Ưu tiên ánh sáng tự nhiên, không gian mở, cây xanh và sử dụng vật liệu
+          mộc.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
